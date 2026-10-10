@@ -10,6 +10,26 @@ Verification status:
 
 ## Perspective Projection and Camera Geometry
 
+### OpenCV — *Perspective-n-Point (PnP) pose computation*
+
+- **Author or organization:** OpenCV
+- **Publication year:** Documentation version 4.8.0; page accessed during this review
+- **Publisher or institution:** Open Source Computer Vision
+- **Stable URL:** https://docs.opencv.org/4.8.0/d5/d1f/calib3d_solvePnP.html
+- **Access status:** Open
+- **Relevant subject:** 3D object points, corresponding 2D image projections, camera intrinsics, distortion, pose, and reprojection error
+- **Verification status:** Examined; directly relevant to the correspondence and camera-pose prior art; not a TPS specification
+
+### OpenCV — *Camera Calibration*
+
+- **Author or organization:** OpenCV
+- **Publication year:** Documentation version 4.11.0; page accessed during this review
+- **Publisher or institution:** Open Source Computer Vision
+- **Stable URL:** https://docs.opencv.org/4.11.0/dc/dbb/tutorial_py_calibration.html
+- **Access status:** Open
+- **Relevant subject:** Object points, image points, calibration patterns, intrinsic and extrinsic parameters, distortion, and image-size-dependent calibration
+- **Verification status:** Examined; directly relevant to calibration prior art; not a TPS requirement
+
 ### Hartley and Zisserman — *Multiple View Geometry in Computer Vision*
 
 - **Author:** Richard Hartley and Andrew Zisserman
@@ -65,6 +85,40 @@ Verification status:
 - **Access status:** Unknown / access to the full article was not confirmed
 - **Relevant subject:** Registration of images acquired at different times, viewpoints, and sensors
 - **Verification status:** Identified from the bibliographic record; full relevant content was not accessible and no claim is verified from it
+
+## Visual Effects and Camera Matching
+
+### Radke — *Computer Vision for Visual Effects*
+
+- **Author:** Richard J. Radke
+- **Publication year:** 2012
+- **Publisher or institution:** Cambridge University Press
+- **Stable URL:** https://www.cambridge.org/core/product/identifier/CBO9781139019682A034/type/BOOK_PART
+- **Access status:** Open chapter record and summary; full book access varies
+- **Relevant subject:** Feature matching, correspondence, tracking, and matchmoving for visual effects
+- **Verification status:** Examined at the publisher chapter record; directly relevant for scope comparison, but not a verified source for a three-point TPS method
+
+## Stop-Motion and Overlay Practice
+
+### Australian Film Television & Radio School — *Stop Motion*
+
+- **Author or organization:** Australian Film Television & Radio School
+- **Publication year:** 2021 document version shown in the URL; exact publication date not relied on here
+- **Publisher or institution:** AFTRS Media Lab
+- **Stable URL:** https://medialab.aftrs.edu.au/wp-content/uploads/2021/07/AFTRS16_StopMotion.2021.pdf
+- **Access status:** Open
+- **Relevant subject:** Onion-skin overlays and aligning successive stop-motion frames
+- **Verification status:** Examined, pp. 14–15; directly relevant to overlay practice, not camera-view recovery by three physical points
+
+### Gasek — “Objects, People, and Places”
+
+- **Author:** Tom Gasek
+- **Publication year:** 2015
+- **Publisher or institution:** Bloomsbury Visual Arts, in *Frame-by-Frame Stop Motion: The Guide to Non-Puppet Photographic Animation*
+- **Stable URL:** https://www.bloomsburyvisualarts.com/app/downloadpdf?docIdS=b-9781315155166
+- **Access status:** Restricted / chapter PDF accessible through publisher delivery during review
+- **Relevant subject:** Camera stability, frame-grabber onion skinning, camera-bump recovery, and placement registration
+- **Verification status:** Examined, Chapter 6, pp. 104–105; directly relevant to practical overlay-guided recovery, not a three-point TPS method
 
 ## Measurement Uncertainty and Repeatability
 
