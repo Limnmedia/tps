@@ -10,6 +10,16 @@ Verification status:
 
 ## Perspective Projection and Camera Geometry
 
+### OpenCV — *Perspective-n-Point (PnP) pose computation*, version 4.10.0
+
+- **Author or organization:** OpenCV
+- **Publication year:** Documentation generated 2024; version 4.10.0
+- **Publisher or institution:** Open Source Computer Vision
+- **Stable URL:** https://docs.opencv.org/4.10.0/d5/d1f/calib3d_solvePnP.html
+- **Access status:** Open
+- **Relevant subject:** P3P, PnP, 3D–2D correspondences, reprojection error, camera pose, and multiple solutions
+- **Verification status:** Examined; directly relevant. The documentation states that `solveP3P()` uses exactly three correspondences and may return up to four solutions. It is pose-estimation prior art, not TPS.
+
 ### OpenCV — *Perspective-n-Point (PnP) pose computation*
 
 - **Author or organization:** OpenCV
@@ -99,6 +109,60 @@ Verification status:
 - **Verification status:** Examined at the publisher chapter record; directly relevant for scope comparison, but not a verified source for a three-point TPS method
 
 ## Stop-Motion and Overlay Practice
+
+### Dragonframe — *Using Dragonframe 2025*
+
+- **Author or organization:** DZED Systems / Dragonframe
+- **Publication year:** 2025 manual
+- **Publisher or institution:** Dragonframe
+- **Stable URL:** https://www.dragonframe.com/download/Using%20Dragonframe%202025.pdf
+- **Access status:** Restricted by large-PDF retrieval during this review; indexed manual text was accessible
+- **Relevant subject:** Onionskin transparency, Live View comparison, difference mode, and frame echo
+- **Verification status:** Examined in indexed manual excerpts; directly relevant to overlay practice. Full manual review was not completed, so no broader claim is made.
+
+### Dragonframe — *Camera Support*
+
+- **Author or organization:** DZED Systems / Dragonframe
+- **Publication year:** Current support page accessed during this review
+- **Publisher or institution:** Dragonframe
+- **Stable URL:** https://www.dragonframe.com/camera-support/
+- **Access status:** Open
+- **Relevant subject:** Low-resolution video assist, high-quality capture, tandem image sequences, and camera-specific live-view dimensions
+- **Verification status:** Examined; directly relevant to coordinate-frame and resolution distinctions. It does not define TPS.
+
+## Computer Vision Textbooks
+
+### Szeliski — *Computer Vision: Algorithms and Applications*, Second Edition
+
+- **Author:** Richard Szeliski
+- **Publication year:** 2022
+- **Publisher or institution:** Springer; author-hosted book site
+- **Stable URL:** https://szeliski.org/Book/
+- **Access status:** Open bibliographic page; electronic text available through the author's download process
+- **Relevant subject:** Computer vision, camera geometry, image matching, and registration
+- **Verification status:** Examined at the official book page; specific relevant chapters were not examined in this pass and are not used as verified evidence.
+
+## VFX Camera Lineup and Survey
+
+### Science-D-Visions — *3DEqualizer Technical Specification*
+
+- **Author or organization:** Science-D-Visions
+- **Publication year:** Not stated on the reviewed page
+- **Publisher or institution:** Science-D-Visions
+- **Stable URL:** https://www.3dequalizer.com/?item=tech_spec&site=start
+- **Access status:** Open
+- **Relevant subject:** Lineup Controls, survey points, distance and plane constraints, camera/lens parameters, manual and automatic camera consistency, and focal-length calculation
+- **Verification status:** Examined; directly relevant to TPS prior art. It documents a broader software camera-lineup and matchmoving system, not the TPS specification.
+
+### Mike Seymour — “3DEqualizer – German precision where VFX needs it”
+
+- **Author:** Mike Seymour; interview with Rolf Schneider
+- **Publication year:** 2014
+- **Publisher or institution:** fxguide
+- **Stable URL:** https://www.fxguide.com/quicktakes/3dequalizer-german-precision-where-vfx-needs-it/
+- **Access status:** Open
+- **Relevant subject:** Survey data, camera tracking, low-parallax shots, lens distortion, scale, and production camera matching
+- **Verification status:** Examined; directly relevant for comparison with VFX survey and camera-tracking practice. It does not establish TPS.
 
 ### Australian Film Television & Radio School — *Stop Motion*
 

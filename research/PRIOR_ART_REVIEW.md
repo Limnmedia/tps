@@ -109,3 +109,57 @@ The complete bibliographic records and access statuses are maintained in [BIBLIO
 6. Richard Hartley and Andrew Zisserman, *Multiple View Geometry in Computer Vision*.
 7. MIT, *Foundations of Computer Vision*, §5.3.1.
 
+## Independent Research Addendum
+
+This addendum records the targeted external pass requested after the initial review. It is evidence about prior art and established practice, not a change to TPS requirements.
+
+### OpenCV — Perspective-n-Point Pose Computation
+
+The examined OpenCV 4.10 documentation states that pose computation uses 3D–2D point correspondences, camera intrinsics, and distortion parameters to estimate rotation and translation by minimizing reprojection error. Its P3P section states that `solveP3P()` uses exactly three 3D–2D correspondences and can return up to four solutions. The documentation also distinguishes P3P/AP3P input behavior in `solvePnP()` and notes that generic PnP can expose multiple solutions.
+
+This directly establishes that three corresponding physical/image points are part of an existing camera-pose problem and that three correspondences do not necessarily identify a unique camera pose. It does not establish TPS: P3P assumes a pose-estimation objective and camera-model inputs, while TPS records and compares image locations and expressly does not require camera reconstruction.
+
+### Dragonframe — *Using Dragonframe 2025*
+
+The accessible indexed text from the examined Dragonframe 2025 manual describes onionskin transparency, dissolving a previous frame over Live View, difference mode, and frame-echo controls. Direct retrieval of the large PDF was limited by the source endpoint, so this source is treated as examined for the indexed manual sections but not as a complete manual review.
+
+The material establishes an existing stop-motion practice of comparing a live view with a recorded frame using transparency or difference display. It does not establish physical point identities, measured triangle geometry, TPS Reference Distance, Working Focal Length, AOV, or a camera-independent TPS reference record.
+
+### Dragonframe — Camera Support
+
+The examined camera-support page states that Dragonframe creates a low-resolution live video-assist sequence and a high-quality capture sequence, keeps them in tandem, and may use live view for animation while capturing full-resolution stills. It also lists camera-specific live-view dimensions, including examples where live view is 960 × 640 or 1920 × 1280.
+
+This is directly relevant to TPS coordinate-frame registration: a live comparison image and a final capture may not share dimensions or representation. It supports the need to distinguish the actual captured image frame from a video-assist frame. It does not define TPS registration or the TPS minimum reference contents.
+
+### Szeliski — *Computer Vision: Algorithms and Applications*, Second Edition
+
+The author's examined book page identifies the 2022 second edition, its computer-vision course basis, and the official electronic edition. The specific downloadable chapter text was not available in the reviewed page, so no chapter-specific mathematical claim is marked verified from this source.
+
+The source is relevant as an authoritative textbook reference for camera geometry, image formation, registration, and matching, but this pass does not claim to have examined those specific chapters. It does not establish TPS or a three-point recovery workflow.
+
+### Science-D-Visions — 3DEqualizer Technical Specification
+
+The examined technical specification lists Lineup Controls for manual camera alignment to surveyed line geometry, dragging lineup-only points, extracting survey data from vertices, lines, and faces, and matching a camera in the current frame to tracked survey points. It also lists automatic camera-consistency operations involving rotation, translation, focal length, and camera position, as well as survey point types, distance constraints, camera constraints, adjustable lens parameters, and focal-length calculation from perspective grid shots.
+
+These are clear precedents for:
+
+- physical survey data associated with image-tracked points;
+- physical-to-image correspondence;
+- manual camera alignment;
+- automatic camera alignment and consistency operations;
+- use of distance constraints and lens/camera parameters.
+
+The operational objective differs from TPS. 3DEqualizer is a software system for matchmoving, survey alignment, camera solving, lens modeling, and production tracking. TPS is an implementation-independent method for recording and recovering a three-point image view without requiring a solved virtual camera, a 3D scene reconstruction, or a particular software system.
+
+The reviewed specification does not document a workflow that is substantially identical to the complete TPS operational model, including the TPS Reference Distance convention, the approved Working Focal Length and AOV record, and physical overlay or live-view recovery independent of camera-solving software. It does, however, substantially overlap the underlying correspondence and camera-lineup concepts. This reduces the basis for broad originality claims.
+
+### FXguide — 3DEqualizer interview
+
+The examined interview describes the value of precise survey data, including LIDAR, total-station data, and reference frames; use of survey to reduce tracking effort and address low-parallax shots; and the need to optimize lens distortion, focal length, scale, and other camera parameters. It also describes camera-tracking workflows and the distinction between monoscopic scale ambiguity and more constrained stereoscopic work.
+
+This supports the conclusion that surveyed physical geometry and image tracking are established VFX practice. It does not establish TPS's manual, implementation-independent, three-point reference-and-recovery objective.
+
+### Addendum conclusion
+
+The closest technical precedents are P3P/PnP for three-point physical/image correspondence and pose ambiguity, 3DEqualizer for survey-based camera lineup and parameter adjustment, and Dragonframe for overlay-guided live/reference comparison. TPS's possible contribution is the combination and restriction of these ideas into a small, implementation-independent view-recovery method with preserved physical measurements and TPS-specific recorded calculations. That combination remains a research hypothesis, not a demonstrated novel contribution.
+
