@@ -163,3 +163,30 @@ This supports the conclusion that surveyed physical geometry and image tracking 
 
 The closest technical precedents are P3P/PnP for three-point physical/image correspondence and pose ambiguity, 3DEqualizer for survey-based camera lineup and parameter adjustment, and Dragonframe for overlay-guided live/reference comparison. TPS's possible contribution is the combination and restriction of these ideas into a small, implementation-independent view-recovery method with preserved physical measurements and TPS-specific recorded calculations. That combination remains a research hypothesis, not a demonstrated novel contribution.
 
+## VES and VFX Interoperability Addendum
+
+### Visual Effects Society publications
+
+The official VES release for the second edition of *The VES Handbook of Visual Effects: Industry Standard VFX Practices and Procedures* identifies the handbook as a practical guide covering VFX techniques and practices from pre-production through post-production. The examined release identifies Jeffrey A. Okun and Susan Zwerman as editors and confirms the 2014 second-edition publication announcement. The handbook's complete relevant chapters were not accessible during this pass. No chapter, author, or page-level claim about camera surveying, lens measurement, camera reports, markers, or lineup methods is therefore marked verified here.
+
+The VES On-Set VFX Data Collection and Usage Guide announcement was examined on the official VES site. It describes a shared playbook for on-set data sets, capture methods, practical applications, stakeholders, handoffs, and workflow automation, and identifies Sheena Duggal as lead author with contributions from Sam Richards, Jim Geduldick, and Jake Morrison. The announcement establishes the existence and production-data purpose of the guide. It does not, by itself, verify a specific camera-survey field list or a three-point physical camera-recovery procedure.
+
+The relevant VES practice overlap with TPS is organizational and operational: preserve useful on-set camera and reference information so that departments and downstream workflows can use it. This supports the general value of recording camera, lens, physical-reference, and image-reference data. It does not establish the TPS Reference Distance, Working Focal Length, AOV, or the TPS three-point method.
+
+### VFX Reference Platform
+
+The official VFX Reference Platform pages were examined. They define annual sets of tool and library versions intended to provide consistent build targets, minimize incompatibilities between software packages, ease integrated-pipeline support, and encourage interoperability. The project addresses software and library compatibility, versioning, and pipeline integration; it is not a camera-geometry, camera-matching, or image-registration specification.
+
+For TPS, the implication is limited and practical. An implementation may use portable data structures, declared units, image-coordinate conventions, and documented interchange fields without depending on a particular VFX Reference Platform year. TPS should not claim conformance to the platform, adopt its version matrix as a requirement, or imply endorsement by the VFX Reference Platform or its maintainers.
+
+### Comparison with TPS
+
+| VES/VFX practice | Overlap with TPS | Difference or limitation |
+|---|---|---|
+| On-set camera and VFX data collection | Preserves production information for later use and handoff. | Publicly examined VES material here does not verify a three-point physical-camera recovery workflow. |
+| Camera survey and matchmoving practice | Uses physical measurements, camera/lens data, and image evidence. | Conventional VFX workflows generally support virtual camera solving, tracking, and downstream reconstruction. TPS matches a view without making camera solving its objective. |
+| VES Handbook | Represents established professional practice and procedures. | Relevant handbook chapters and pages were inaccessible; no specific handbook claim is verified. |
+| VFX Reference Platform | Supports software interoperability and portable implementation choices. | It standardizes software/library environments, not TPS geometry, reference contents, or camera alignment. |
+
+The review found no verified published VES or VFX Reference Platform source that formalizes the complete TPS workflow. This is not evidence of originality. The closest precedents remain P3P/PnP, VFX survey and matchmoving, 3DEqualizer lineup, and Dragonframe reference overlays.
+

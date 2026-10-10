@@ -164,6 +164,40 @@ Verification status:
 - **Relevant subject:** Survey data, camera tracking, low-parallax shots, lens distortion, scale, and production camera matching
 - **Verification status:** Examined; directly relevant for comparison with VFX survey and camera-tracking practice. It does not establish TPS.
 
+## Visual Effects Society and Production Data
+
+### Visual Effects Society — *The VES Handbook of Visual Effects: Industry Standard VFX Practices and Procedures*, Second Edition
+
+- **Editors:** Jeffrey A. Okun and Susan Zwerman
+- **Publication year:** 2014
+- **Publisher or institution:** Visual Effects Society / Focal Press
+- **Stable URL:** https://vesglobal.org/wp-content/uploads/2014/09/ves_handbook_release1.pdf
+- **Access status:** The official release announcement is open; the complete handbook chapters were not accessible for this review
+- **Relevant subject:** VFX production practices, camera work, surveying, tracking, lens data, and production procedures
+- **Verification status:** Identified and examined through the official release announcement; handbook-specific chapters, authors, and page numbers were not verified
+
+### Visual Effects Society — *On-Set VFX Data Collection and Usage Guide*
+
+- **Author or organization:** Visual Effects Society Technology Committee; lead author Sheena Duggal, with Sam Richards, Jim Geduldick, and Jake Morrison; technical support by Jean-Francois Panisset
+- **Publication year:** 2026 announcement and guide release
+- **Publisher or institution:** Visual Effects Society
+- **Stable URL:** https://vesglobal.org/press-releases/on-set-vfx-data-collection-and-usage-guide/
+- **Access status:** Official announcement open; linked guide identified but its detailed contents were not examined in this pass
+- **Relevant subject:** On-set data sets, capture workflows, stakeholders, handoffs, and production-data interoperability
+- **Verification status:** Examined for the existence, purpose, authorship, and stated scope of the guide; no detailed camera-field claim is verified from the announcement
+
+## VFX Interoperability
+
+### VFX Reference Platform — Official Project
+
+- **Author or organization:** VFX Reference Platform, in collaboration with the Visual Effects Society Technology Committee
+- **Publication year:** Annual platform; current status page examined during this review
+- **Publisher or institution:** VFX Reference Platform / Academy Software Foundation ecosystem
+- **Stable URL:** https://vfxplatform.com/ and https://vfxplatform.com/about/
+- **Access status:** Open
+- **Relevant subject:** Tool and library versions, build targets, software interoperability, compatibility, and annual version management
+- **Verification status:** Examined and verified for its stated interoperability scope; it is not a camera-geometry or camera-matching specification and does not establish TPS conformance or endorsement
+
 ### Australian Film Television & Radio School — *Stop Motion*
 
 - **Author or organization:** Australian Film Television & Radio School
