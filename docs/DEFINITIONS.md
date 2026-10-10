@@ -308,11 +308,23 @@ The reference preserves the information required to reproduce the recorded view.
 
 ### Working Focal Length
 
-TPS calculates the Working Focal Length once when establishing the reference. The calculated value is recorded in the TPS reference.
+TPS calculates the Working Focal Length once when establishing the reference using:
+
+```text
+f_TPS = (|xB - xA| / W_image) * W_sensor * (D / AB)
+```
+
+Here, `xA` and `xB` are horizontal image coordinates after accounting for recorded camera roll. `W_image` is the captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters. `D` is the measured sensor-plane-to-reference-plane distance in millimeters. `AB` is the measured physical A–B distance in millimeters.
+
+The calculation assumes that A and B are at approximately equal depth and aligned as closely as practical with camera-horizontal. Roll correction accounts for image rotation; it does not correct physical A–B misalignment.
+
+The calculated value is recorded in the TPS reference.
 
 Downstream applications, including VFX pipelines, may independently recalculate or reinterpret focal length for their own requirements. The original TPS value remains preserved.
 
 The calculation inputs needed for reproducibility and verification are retained.
+
+Sensor-plane distance is a practical measurement convention. Relative to ideal projection-center geometry, the result is approximate. The Working Focal Length is not necessarily identical to the lens manufacturer's nominal focal length. See the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) for the mathematical derivation and limitations.
 
 A TPS reference must not be confused with the physical triangle itself.
 
