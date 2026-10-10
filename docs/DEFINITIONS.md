@@ -81,3 +81,46 @@ A physical point exists in three-dimensional space.
 Its image point exists in a two-dimensional image coordinate system.
 
 TPS relates these two geometric entities.
+
+## Definition 3 — Correspondence
+
+**Plain-language definition:**
+
+Each point in the real world is matched to where that same point appears in the image.
+
+**Precise definition:**
+
+Correspondence is the established association between a specific physical point and its projected location in a two-dimensional image.
+
+**Classification:** Foundational geometric relationship.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+TPS establishes correspondence between three physical points and their projected image points.
+
+By convention:
+
+- Physical point A corresponds to image point a.
+- Physical point B corresponds to image point b.
+- Physical point C corresponds to image point c.
+
+These associations identify which image point belongs to which physical point.
+
+Correspondence must remain consistent when comparing two projections.
+
+The identity of each point is preserved even when its projected image coordinates change.
+
+Correspondence:
+
+- Identifies which physical point produced each image point.
+- Does not require knowledge of the camera's position.
+- Does not require knowledge of camera orientation.
+- Does not require knowledge of focal length.
+- Does not establish physical distances or angles.
+- Does not establish that matching three corresponding image points uniquely determines a camera configuration.
+
+Correspondence must not be confused with proximity.
+
+For example, image point a remains associated with physical point A, even if image point b happens to appear closer to A's previous image location.
