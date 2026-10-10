@@ -136,9 +136,45 @@ Focal length is distinct from:
 
 These relationships will be examined in the geometric model and mathematical formulation.
 
+## Observation 5
+
+**Plain-language statement:**
+
+Moving the camera can change where the three points appear in the image.
+
+**Precise statement:**
+
+Changing a camera's position or orientation, while holding the physical points and camera's intrinsic parameters fixed, can change the projected image coordinates of those points.
+
+**Classification:** Established principle of camera projection geometry.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+Camera movement can change the relationship between physical points and their projected image positions.
+
+Two types of camera movement are relevant:
+
+1. **Translation:** Moving the camera from one position to another.
+2. **Rotation:** Changing the direction the camera faces without changing its position.
+
+Both can change the projected positions of the three physical points.
+
+The physical triangle remains unchanged.
+
+Observation 5 does not establish:
+
+- That every camera movement changes the projection.
+- That matching projections uniquely determine the camera's physical position.
+- That camera translation and rotation produce equivalent geometric effects.
+- That the physical triangle changes when the camera moves.
+- That camera movement alone is sufficient to reproduce a particular projection.
+
+These relationships belong to the later geometric model and mathematical formulation.
+
 ## Additional Observations
 
-5. Moving or rotating the camera can change the projected positions of those points.
 6. When the same three physical points appear at the same three image locations, the recorded 2D projection has been reproduced.
 
 Reproducing a projection is not the same as reproducing a unique camera position. The same three image locations do not, by themselves, claim to determine a unique camera position in 3D space.
