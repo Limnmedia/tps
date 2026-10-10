@@ -246,3 +246,66 @@ A three-point projection:
 - Does not independently establish focal length.
 - Does not necessarily reproduce the entire image.
 - May be geometrically degenerate.
+
+## Definition 6 — TPS Reference
+
+**Plain-language definition:**
+
+A TPS reference remembers where three points appeared in an image.
+
+**Precise definition:**
+
+A TPS reference is a recorded three-point projection that preserves the correspondence and image locations of three identified physical points for subsequent comparison or reproduction.
+
+**Classification:** TPS-specific operational definition.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+A TPS reference preserves the relationship between three identified physical points and their corresponding locations in an image.
+
+By convention:
+
+- Physical point A → Image point a
+- Physical point B → Image point b
+- Physical point C → Image point c
+
+The reference preserves the identities and image locations of a, b, and c.
+
+These recorded locations can later be compared against another camera projection.
+
+A TPS reference may be recorded using physical marks, transparent overlays, photographic media, digital coordinates, or other suitable methods.
+
+The reference is information, not a particular recording technology.
+
+### Image Coordinate Frame
+
+A TPS reference must establish an image coordinate frame in which its recorded point locations are meaningful.
+
+The reference must be registered consistently when comparing or reproducing a projection.
+
+For example:
+
+- A transparent overlay may be registered against a camera monitor.
+- Three marks may be placed directly on a fixed display surface.
+- A digital reference may use a defined image coordinate system.
+- Photographic media may use physical registration marks or another repeatable alignment method.
+
+The specific registration methods and their accuracy requirements will be defined later.
+
+A TPS reference:
+
+- Preserves the correspondence of A, B, and C.
+- Preserves their image locations.
+- Establishes a usable image coordinate frame.
+- Is independent of any particular software.
+- Is independent of any particular file format.
+- Does not require a particular recording medium.
+- Does not necessarily contain physical triangle measurements.
+- Does not necessarily contain camera position, orientation, or focal length.
+- Does not guarantee that the projection can be reproduced under every camera configuration.
+
+A TPS reference must not be confused with the physical triangle itself.
+
+The reference records the image-space relationship, not the physical geometry.
