@@ -95,9 +95,49 @@ It does not establish:
 
 These questions belong to later geometric analysis.
 
+## Observation 4
+
+**Plain-language statement:**
+
+Changing the camera's focal length can change where the three points appear in the image.
+
+**Precise statement:**
+
+Changing a camera's focal length, while holding its position and orientation fixed, can change the projected image coordinates of three stationary physical points.
+
+**Classification:** Established principle of camera projection geometry.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+A camera's focal length affects how physical points are projected into its image.
+
+When the camera remains stationary, changing the focal length can change the positions of the three projected points.
+
+The physical triangle remains unchanged.
+
+This establishes that camera parameters can affect the image projection independently of camera movement.
+
+Observation 4 does not establish:
+
+- A formula for calculating focal length.
+- That focal length can be uniquely determined from three projected points.
+- That changing focal length always changes every projected point's image coordinates.
+- That changing focal length changes the physical triangle.
+- That focal length and camera distance are interchangeable.
+
+Focal length is distinct from:
+
+- Physical sensor dimensions.
+- Sensor cropping.
+- Digital image scaling.
+- Changes in image resolution.
+
+These relationships will be examined in the geometric model and mathematical formulation.
+
 ## Additional Observations
 
-4. Changing the camera's focal length can change the projected positions of those points.
 5. Moving or rotating the camera can change the projected positions of those points.
 6. When the same three physical points appear at the same three image locations, the recorded 2D projection has been reproduced.
 
