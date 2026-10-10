@@ -58,9 +58,45 @@ It does not establish:
 
 These questions belong to later observations, definitions, and geometric analysis.
 
+## Observation 3
+
+**Plain-language statement:**
+
+The camera's image is two-dimensional.
+
+**Precise statement:**
+
+The camera represents visible physical points as locations in a two-dimensional image coordinate system.
+
+**Classification:** Established principle of camera projection geometry.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+Physical points exist in three-dimensional space.
+
+A camera projects visible physical points onto a two-dimensional image.
+
+Each projected point has a location in that image.
+
+The three physical points form a triangle in space. Their corresponding image points also form a triangle when the projected points are distinct and non-collinear.
+
+The physical triangle and its image projection are related, but they are not geometrically identical.
+
+Observation 3 establishes the dimensional relationship between physical space and image space.
+
+It does not establish:
+
+- That physical distances are preserved in the image.
+- That physical angles are preserved in the image.
+- That the image contains enough information to reconstruct the original three-dimensional geometry.
+- That the three projected points must always form a nondegenerate triangle.
+
+These questions belong to later geometric analysis.
+
 ## Additional Observations
 
-3. The three physical points appear as points in a two-dimensional image.
 4. Changing the camera's focal length can change the projected positions of those points.
 5. Moving or rotating the camera can change the projected positions of those points.
 6. When the same three physical points appear at the same three image locations, the recorded 2D projection has been reproduced.
