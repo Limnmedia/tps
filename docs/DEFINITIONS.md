@@ -294,17 +294,25 @@ For example:
 
 The specific registration methods and their accuracy requirements will be defined later.
 
-A TPS reference:
+A TPS reference preserves:
 
-- Preserves the correspondence of A, B, and C.
-- Preserves their image locations.
-- Establishes a usable image coordinate frame.
-- Is independent of any particular software.
-- Is independent of any particular file format.
-- Does not require a particular recording medium.
-- Does not necessarily contain physical triangle measurements.
-- Does not necessarily contain camera position, orientation, or focal length.
-- Does not guarantee that the projection can be reproduced under every camera configuration.
+1. Three identified physical points: A, B, and C.
+2. Their corresponding image locations: a, b, and c.
+3. Explicit correspondence: A → a, B → b, and C → c.
+4. Image coordinate-frame information sufficient to interpret and register the recorded locations.
+5. Physical triangle geometry, including the measured relationships between A, B, and C.
+6. Focus distance, measured from the camera sensor plane to the designated reference plane.
+7. Working Focal Length.
+
+The reference preserves the information required to reproduce the recorded view. It remains independent of any particular software, file format, or recording medium.
+
+### Working Focal Length
+
+TPS calculates the Working Focal Length once when establishing the reference. The calculated value is recorded in the TPS reference.
+
+Downstream applications, including VFX pipelines, may independently recalculate or reinterpret focal length for their own requirements. The original TPS value remains preserved.
+
+The calculation inputs needed for reproducibility and verification are retained.
 
 A TPS reference must not be confused with the physical triangle itself.
 
