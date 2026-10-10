@@ -18,7 +18,7 @@ Use TPS to record sufficient information about the original camera view so that 
 - The points can be viewed by a camera and are not obscured.
 - The corresponding image points a, b, and c can be identified consistently.
 - A TPS reference can establish a consistently registered image coordinate frame.
-- The physical triangle geometry, focus distance, and Working Focal Length can be recorded as part of the TPS reference.
+- The physical triangle geometry, TPS Reference Distance, actual captured image dimensions, coordinate-frame information, and Working Focal Length can be recorded as part of the TPS reference.
 
 ## Method
 
@@ -26,13 +26,16 @@ Use TPS to record sufficient information about the original camera view so that 
 2. Establish their corresponding image points a, b, and c.
 3. Record their correspondence and image locations in a consistently defined image coordinate frame.
 4. Preserve the physical triangle geometry.
-5. Record focus distance, measured from the camera sensor plane to the designated reference plane.
-6. Calculate Working Focal Length once when establishing the TPS reference, and preserve the calculated value and necessary calculation inputs.
-7. During recovery, establish the corresponding physical reference points and adjust the camera view until the three image points match the recorded reference within the specified tolerance.
+5. Record the TPS Reference Distance, measured from the camera sensor plane to the designated reference plane, and the actual captured image width and height.
+6. Record the coordinate-frame information needed to interpret and register the image points, and preserve physical sensor dimensions when known.
+7. Calculate the Working Focal Length and horizontal AOV once when establishing the TPS reference, and preserve the calculated values and necessary calculation inputs.
+8. During recovery, present the recorded reference points in registration with the live viewing frame, establish the corresponding physical reference points, and adjust the camera view to obtain the closest practical match.
+
+An overlay may be used for registration, including a transparent reference over a television monitor, registered celluloid or film, or a digital overlay such as a transparent PNG. These are examples, not mandatory technologies. A recovery record is optional.
 
 ## Expected Outcome
 
-The recorded three-point projection is reproduced within the specified tolerance.
+The recorded three-point projection is reproduced as the closest practical match available under the operating conditions. TPS does not prescribe a universal numerical acceptance tolerance.
 
 The TPS reference also preserves camera-reference information for subsequent production or VFX work.
 

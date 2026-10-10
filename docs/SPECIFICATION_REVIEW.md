@@ -13,21 +13,30 @@
 - **Research:** Requires derivation, source review, or experiment.
 - **Editorial:** Presentation or organization only.
 
+## Blocking Findings Status
+
+The two blocking findings from this review are addressed by the current specification updates:
+
+1. The minimum image coordinate-frame record is now defined in `docs/DEFINITIONS.md`, including image dimensions, origin, axes, units, point positions, and relevant crop, rotation, or mirroring information.
+2. TPS reference and recovery semantics are now defined in `SPECIFICATION.md`, `docs/DEFINITIONS.md`, and `docs/USE_CASES.md`, including the reference contents, TPS Reference Distance, retained calculation inputs, registered live-view comparison, optional recovery records, and closest-practical-match objective.
+
+The remaining findings are clarifications, research items, or editorial work and do not prevent the stated operational model from being understood.
+
 ## Findings
 
-### Blocking 1 — Image coordinate frame is required but not operationally specified
+### Addressed — Former Blocking 1: Image coordinate frame
 
 - **File and section:** `docs/DEFINITIONS.md`, Definition 6 — TPS Reference, “Image Coordinate Frame”; `docs/GEOMETRY.md`, Geometry Principle 4 — Projection Equivalence; `research/derivations/IMAGE_REGISTRATION.md`
-- **Description:** TPS requires a consistently registered image coordinate frame, but does not define the minimum recorded information needed to reproduce that frame. Origin, axis directions, pixel-center convention, crop, scale, rotation, mirroring, and any transformation record are discussed in research but are not part of an operational specification.
-- **Why it matters:** Independent implementations can record the same image points in incompatible coordinate systems and still claim to have created equivalent references.
-- **Recommended correction:** Approve a concise minimum coordinate-frame record, using the concepts already developed in `IMAGE_REGISTRATION.md`. Do not prescribe a file format or a universal normalization convention.
+- **Description:** Resolved. The minimum recorded coordinate-frame information is now specified without prescribing a file format or universal convention.
+- **Why it matters:** Independent implementations now have the minimum semantic information needed to interpret and register recorded points.
+- **Recommended correction:** No further blocking correction. Research may refine registration procedures later.
 
-### Blocking 2 — Reference input and recovery records are not fully defined
+### Addressed — Former Blocking 2: Reference input and recovery records
 
 - **File and section:** `SPECIFICATION.md`, “TPS Reference Requirements” and “Working Focal Length”; `docs/DEFINITIONS.md`, Definition 6 — TPS Reference; `docs/USE_CASES.md`, UC-001 Method
-- **Description:** The specification lists the required data, but does not define how the recorded reference identifies the designated reference plane, the sensor-plane distance measurement, roll-corrected coordinates, active sensor width, or retained calculation inputs.
-- **Why it matters:** An independent implementation cannot reliably reproduce the Working Focal Length calculation or determine whether two reference records use compatible inputs.
-- **Recommended correction:** Define the minimum semantic contents of each input and record, while leaving storage format and hardware open.
+- **Description:** Resolved. The reference contents, TPS Reference Distance, captured-image dimensions, active sensor dimensions when known, frame semantics, calculations, and recovery comparison model are now defined.
+- **Why it matters:** Independent implementations can identify the required reference information while retaining implementation independence.
+- **Recommended correction:** No further blocking correction. Experimental validation remains necessary for practical performance and measurement limits.
 
 ### Clarification 1 — Working Focal Length status is ambiguous
 
@@ -130,21 +139,16 @@
 - The reference contents and Working Focal Length convention are recorded.
 - Research derivations identify assumptions and limitations.
 
-### Not complete enough for independent conformance
+### Remaining limitations
 
-- Coordinate-frame records are not fully specified.
-- Reference input semantics are not fully specified.
 - Practical matching has no common error or uncertainty description.
 - Reference validity and failure conditions remain incomplete.
 - Working Focal Length has no validated real-lens applicability boundary.
 
 ## Recommended Correction Order
 
-1. Clarify reference-record semantics and coordinate-frame information.
-2. Clarify focus distance versus `D`.
-3. State the status of the Working Focal Length formula as a TPS convention under assumptions, not a universal optical identity.
-4. Establish terminology for equivalence, exact match, practical match, and closest practical match.
-5. Run registration, repeatability, and Working Focal Length experiments.
-6. Consolidate repeated scope language after the technical distinctions stabilize.
+1. Clarify terminology for equivalence, exact match, practical match, and closest practical match.
+2. Run registration, repeatability, and Working Focal Length experiments.
+3. Consolidate repeated scope language after the technical distinctions stabilize.
 
 No new requirements are introduced by this review.
