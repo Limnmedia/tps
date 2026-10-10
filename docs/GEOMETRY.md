@@ -125,6 +125,87 @@ Matching three projected points does not necessarily establish a unique camera p
 This principle does not establish:
 
 - A camera calibration procedure.
+- A required TPS triangle size.
+- A required TPS triangle orientation.
+- A required camera-to-triangle distance.
+- A universal camera model for TPS.
+- A unique inverse projection.
+- A focal-length calculation.
+
+## Geometry Principle 3 — Projection Ambiguity
+
+**Status:** Approved — Working Draft 0.1
+
+**Classification:** Geometric principle.
+
+### Plain-Language Statement
+
+Different camera setups can make the same three points appear in the same places in an image.
+
+### Precise Statement
+
+Under perspective projection, distinct configurations of physical points and camera parameters can produce identical image coordinates for three corresponding points.
+
+### Explanation
+
+A TPS reference records the image locations of three corresponding physical points:
+
+- A → a
+- B → b
+- C → c
+
+Reproducing these image locations establishes a three-point projection match.
+
+However, the same image coordinates may be produced by more than one physical and camera configuration.
+
+Therefore, matching a TPS reference does not necessarily recover the original camera's:
+
+- Position
+- Orientation
+- Focal length
+- Complete physical configuration
+
+### Example — Uniform Scaling
+
+Consider a physical triangle observed through an ideal perspective camera.
+
+If the positions of all three physical points relative to the camera's projection center are uniformly scaled by the same positive factor, their projected image coordinates remain unchanged, provided that:
+
+- Camera orientation remains unchanged.
+- Camera intrinsic parameters remain unchanged.
+- Correspondence is preserved.
+- The ideal perspective camera model applies.
+
+This demonstrates that physically different configurations can produce identical three-point projections.
+
+It also illustrates why a geometrically similar triangle may be useful when reproducing a reference at a different physical scale.
+
+### Important Distinction
+
+**Projection matching:** Reproducing the recorded image coordinates of three corresponding physical points.
+
+**Camera reconstruction:** Determining the camera's physical position, orientation, and intrinsic parameters.
+
+These are related but distinct objectives.
+
+TPS establishes a method of recording and comparing three-point projections.
+
+A projection match alone does not establish unique camera reconstruction.
+
+Additional measurements or constraints may be required to determine a particular camera configuration.
+
+### Scope
+
+This principle does not establish:
+
+- That all different triangles can reproduce the same projection.
+- That triangle similarity alone guarantees a projection match.
+- That every camera configuration has multiple solutions under every set of constraints.
+- That camera reconstruction is impossible.
+- That a three-point match guarantees alignment of the entire scene.
+- A specific reconstruction algorithm.
+- A focal-length calculation.
+- A camera calibration procedure.
 
 ## Geometry Principle 4 — Projection Equivalence
 
@@ -217,84 +298,3 @@ This principle does not establish:
 - A numerical matching tolerance.
 - Unique camera reconstruction.
 - Equivalence of entire photographs.
-- A required TPS triangle size.
-- A required TPS triangle orientation.
-- A required camera-to-triangle distance.
-- A universal camera model for TPS.
-- A unique inverse projection.
-- A focal-length calculation.
-
-## Geometry Principle 3 — Projection Ambiguity
-
-**Status:** Approved — Working Draft 0.1
-
-**Classification:** Geometric principle.
-
-### Plain-Language Statement
-
-Different camera setups can make the same three points appear in the same places in an image.
-
-### Precise Statement
-
-Under perspective projection, distinct configurations of physical points and camera parameters can produce identical image coordinates for three corresponding points.
-
-### Explanation
-
-A TPS reference records the image locations of three corresponding physical points:
-
-- A → a
-- B → b
-- C → c
-
-Reproducing these image locations establishes a three-point projection match.
-
-However, the same image coordinates may be produced by more than one physical and camera configuration.
-
-Therefore, matching a TPS reference does not necessarily recover the original camera's:
-
-- Position
-- Orientation
-- Focal length
-- Complete physical configuration
-
-### Example — Uniform Scaling
-
-Consider a physical triangle observed through an ideal perspective camera.
-
-If the positions of all three physical points relative to the camera's projection center are uniformly scaled by the same positive factor, their projected image coordinates remain unchanged, provided that:
-
-- Camera orientation remains unchanged.
-- Camera intrinsic parameters remain unchanged.
-- Correspondence is preserved.
-- The ideal perspective camera model applies.
-
-This demonstrates that physically different configurations can produce identical three-point projections.
-
-It also illustrates why a geometrically similar triangle may be useful when reproducing a reference at a different physical scale.
-
-### Important Distinction
-
-**Projection matching:** Reproducing the recorded image coordinates of three corresponding physical points.
-
-**Camera reconstruction:** Determining the camera's physical position, orientation, and intrinsic parameters.
-
-These are related but distinct objectives.
-
-TPS establishes a method of recording and comparing three-point projections.
-
-A projection match alone does not establish unique camera reconstruction.
-
-Additional measurements or constraints may be required to determine a particular camera configuration.
-
-### Scope
-
-This principle does not establish:
-
-- That all different triangles can reproduce the same projection.
-- That triangle similarity alone guarantees a projection match.
-- That every camera configuration has multiple solutions under every set of constraints.
-- That camera reconstruction is impossible.
-- That a three-point match guarantees alignment of the entire scene.
-- A specific reconstruction algorithm.
-- A focal-length calculation.
-- A camera calibration procedure.
