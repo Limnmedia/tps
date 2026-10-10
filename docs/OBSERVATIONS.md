@@ -173,8 +173,39 @@ Observation 5 does not establish:
 
 These relationships belong to the later geometric model and mathematical formulation.
 
-## Additional Observations
+## Observation 6 — Reproducing the Projection
 
-6. When the same three physical points appear at the same three image locations, the recorded 2D projection has been reproduced.
+**Plain-language statement:**
 
-Reproducing a projection is not the same as reproducing a unique camera position. The same three image locations do not, by themselves, claim to determine a unique camera position in 3D space.
+When the same three points appear in the same places in the image, we've matched the three-point view.
+
+**Precise statement:**
+
+When three corresponding physical points project to the same three image coordinates as a recorded reference, the three-point projection has been reproduced.
+
+**Classification:** Geometric correspondence principle.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+A camera projects three physical points into an image.
+
+The positions of those projected points can be recorded and used as a reference.
+
+A camera configuration reproduces the recorded three-point projection when the same three physical points appear at the same three image coordinates.
+
+This correspondence can be established without requiring the camera's physical coordinate system to be aligned with another coordinate system.
+
+The comparison takes place in image space.
+
+Observation 6 does not establish:
+
+- That matching projections uniquely determine the camera's physical position.
+- That the camera's orientation is necessarily identical.
+- That the focal lengths are identical.
+- That the entire image has been reproduced.
+- That matching three points guarantees all other physical objects will appear in the same locations.
+- That three-point correspondence uniquely determines the complete camera configuration.
+
+These questions belong to the geometric model, assumptions, constraints, and validation.
