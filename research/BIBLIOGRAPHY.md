@@ -28,7 +28,7 @@ Verification status:
 - **Stable URL:** https://visionbook.mit.edu/imaging.html
 - **Access status:** Open
 - **Relevant subject:** Pinhole and perspective projection, 3D-to-2D mapping, image coordinates, depth, and focal length
-- **Verification status:** Verified for the general perspective-projection and image-coordinate claims cited in the evidence map
+- **Verification status:** Examined and verified for the general perspective-projection, depth, and image-coordinate claims cited in the evidence map; not verification of TPS-specific behavior
 
 ## Triangle Geometry and Similarity
 
@@ -40,7 +40,7 @@ Verification status:
 - **Stable URL:** https://openstax.org/books/contemporary-mathematics/pages/10-3-triangles
 - **Access status:** Open
 - **Relevant subject:** Noncollinear points forming a triangle and triangle similarity by corresponding proportions
-- **Verification status:** Verified for the basic triangle-formation and similarity statements cited in the evidence map
+- **Verification status:** Examined and verified for the basic triangle-formation and similarity statements cited in the evidence map; not verification of TPS-specific triangle requirements
 
 ## Camera Optics and Focal Length
 
@@ -52,7 +52,7 @@ Verification status:
 - **Stable URL:** https://www.edmundoptics.com/knowledge-center/application-notes/imaging/understanding-focal-length-and-field-of-view
 - **Access status:** Open
 - **Relevant subject:** Focal length, field of view, working distance, sensor size, and practical optical limitations
-- **Verification status:** Verified for the general focal-length and field-of-view relationship; not verification of the TPS Working Focal Length, which remains TPS-specific
+- **Verification status:** Examined and verified for the general focal-length and field-of-view relationship; not verification of the TPS Working Focal Length, which remains TPS-specific
 
 ## Image Coordinate Registration
 
@@ -64,7 +64,7 @@ Verification status:
 - **DOI:** https://doi.org/10.1145/146370.146374
 - **Access status:** Unknown / access to the full article was not confirmed
 - **Relevant subject:** Registration of images acquired at different times, viewpoints, and sensors
-- **Verification status:** Identified; not examined for claim verification
+- **Verification status:** Identified from the bibliographic record; full relevant content was not accessible and no claim is verified from it
 
 ## Measurement Uncertainty and Repeatability
 
@@ -76,7 +76,7 @@ Verification status:
 - **Stable URL:** https://www.nist.gov/pml/nist-technical-note-1297
 - **Access status:** Open
 - **Relevant subject:** Measurement uncertainty, repeatability, reproducibility, uncertainty components, and reporting
-- **Verification status:** Verified for the repeatability and reproducibility terminology cited in the evidence map
+- **Verification status:** Examined and verified for the repeatability and reproducibility terminology cited in the evidence map
 
 ### JCGM — *Evaluation of Measurement Data — Guide to the Expression of Uncertainty in Measurement (JCGM 100:2008)*
 
