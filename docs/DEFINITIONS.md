@@ -309,3 +309,73 @@ A TPS reference:
 A TPS reference must not be confused with the physical triangle itself.
 
 The reference records the image-space relationship, not the physical geometry.
+
+## Definition 7 — Projection Match
+
+**Plain-language definition:**
+
+A projection matches when the three points appear in the same places as the reference.
+
+**Precise definition:**
+
+A projection match occurs when the three corresponding image points occupy the same locations as those recorded in a TPS reference, within a specified tolerance and a consistently registered image coordinate frame.
+
+**Classification:** TPS-specific operational definition.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+A TPS reference records the image locations of three identified physical points: A, B, and C.
+
+Their corresponding image points are a, b, and c.
+
+A projection match occurs when a subsequent camera projection places these three image points at the same locations as the reference, either exactly or within an established tolerance.
+
+The comparison must use a consistently registered image coordinate frame.
+
+### Types of Match
+
+1. **Exact Match**
+
+   All three corresponding image points occupy precisely the same image coordinates as the reference.
+
+   This is the ideal mathematical condition.
+
+2. **Practical Match**
+
+   All three corresponding image points agree with their reference locations within a specified tolerance.
+
+   This accommodates measurement uncertainty, equipment limitations, and physical adjustment errors.
+
+Both describe the same underlying TPS correspondence principle.
+
+### Tolerance
+
+A practical match requires an established tolerance.
+
+The tolerance must be defined in terms appropriate to the image coordinate frame and measurement method.
+
+Examples of possible measurement methods include:
+
+- Visual alignment using a physical overlay.
+- Alignment using registration marks.
+- Numerical comparison of image coordinates.
+- Software-assisted measurement.
+
+Numerical tolerances are not established here.
+
+Tolerance definitions, error metrics, and acceptance criteria belong to later mathematical analysis and validation.
+
+A projection match:
+
+- Preserves correspondence between A, B, and C.
+- Requires consistent image registration.
+- Compares image-space locations.
+- Does not require matching physical coordinate systems.
+- Does not independently establish a unique camera position.
+- Does not require identical focal lengths.
+- Does not guarantee reproduction of the entire image.
+- Does not guarantee that unrelated physical points project to identical image locations.
+
+A practical match must not be described as mathematically exact.
