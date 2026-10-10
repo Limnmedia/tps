@@ -198,6 +198,78 @@ Verification status:
 - **Relevant subject:** Tool and library versions, build targets, software interoperability, compatibility, and annual version management
 - **Verification status:** Examined and verified for its stated interoperability scope; it is not a camera-geometry or camera-matching specification and does not establish TPS conformance or endorsement
 
+## Interdisciplinary Prior Art
+
+### Heritage and Repeat Photography: Techniques, Management, Applications, and Publications
+
+- **Author:** Review article; author metadata recorded by the journal
+- **Publication year:** 2022
+- **Publisher or institution:** *Heritage*, MDPI, 5(4)
+- **DOI:** https://doi.org/10.3390/heritage5040220
+- **Access status:** Open
+- **Relevant subject:** Rephotography, locating historical camera positions, image registration, and heritage comparison
+- **Verification status:** Examined and verified for the general rephotography objective and registration challenges; not a TPS method
+
+### Chow — “Photogrammetric Space Resection”
+
+- **Author:** Carl Chow
+- **Publication year:** 1950
+- **Publisher or institution:** *Transactions of the American Society of Civil Engineers*, 115(1), pp. 235–259
+- **DOI:** https://doi.org/10.1061/TACEAT.0006318
+- **Access status:** Abstract and bibliographic record open; full article access varies
+- **Relevant subject:** Three ground control points, image points, and camera exposure-station resection
+- **Verification status:** Examined abstract and record; verified for the stated resection relationship, not for TPS's non-reconstruction objective
+
+### Open AGH — *Basics of Photogrammetry*
+
+- **Author or organization:** Open AGH educational platform
+- **Publication year:** Not stated on the reviewed page
+- **Publisher or institution:** AGH University of Science and Technology educational resource
+- **Stable URL:** https://epodreczniki.open.agh.edu.pl/handbook/4795/module/4812/reader
+- **Access status:** Open
+- **Relevant subject:** Collinearity, perspective center, image points, and exterior orientation
+- **Verification status:** Examined and verified for the general photogrammetric principles cited in the interdisciplinary review
+
+### Beroiz, Cabral, and Sanchez — “Astroalign: A Python module for astronomical image registration”
+
+- **Authors:** M. Beroiz, J. B. Cabral, B. Sanchez
+- **Publication year:** 2020
+- **Publisher or institution:** *Astronomy and Computing*, 32, article 100384
+- **DOI:** https://doi.org/10.1016/j.ascom.2020.100384
+- **Access status:** Abstract open; full article access varies
+- **Relevant subject:** Matching three-point star asterisms and estimating image transformations without WCS information
+- **Verification status:** Examined abstract and bibliographic record; verified for the three-point asterism registration claim
+
+### Mohammadian et al. — “High accuracy, fiducial marker-based image registration of correlative microscopy images”
+
+- **Authors:** Sajjad Mohammadian et al.
+- **Publication year:** 2019
+- **Publisher or institution:** *Scientific Reports*, 9, 3211
+- **DOI:** https://doi.org/10.1038/s41598-019-40098-4
+- **Access status:** Open
+- **Relevant subject:** Fiducial markers, multimodal image registration, composed transformations, and accuracy assessment
+- **Verification status:** Examined full open article; verified for the stated fiducial-registration method and scope
+
+### Masci et al. — “Image registration and astrometric calibration for the Spitzer Space Telescope”
+
+- **Authors:** F. Masci et al.
+- **Publication year:** 2004
+- **Publisher or institution:** *Publications of the Astronomical Society of the Pacific*, 116
+- **Stable URL:** https://web.ipac.caltech.edu/staff/fmasci/home/sirtfwork/paper7R.pdf
+- **Access status:** Open PDF located; full relevant text not examined in this pass
+- **Relevant subject:** Astronomical image registration and reference-source alignment
+- **Verification status:** Identified; specific claims remain unverified
+
+### OpenCV — *Basic concepts of the homography explained with code*
+
+- **Author or organization:** OpenCV
+- **Publication year:** Documentation for OpenCV 3.0+
+- **Publisher or institution:** Open Source Computer Vision
+- **Stable URL:** https://docs.opencv.org/4.5.1/d9/dab/tutorial_homography.html
+- **Access status:** Open
+- **Relevant subject:** Planar homography and projective transformation between planes
+- **Verification status:** Examined and verified for the general homography relationship; not a TPS requirement
+
 ### Australian Film Television & Radio School — *Stop Motion*
 
 - **Author or organization:** Australian Film Television & Radio School
