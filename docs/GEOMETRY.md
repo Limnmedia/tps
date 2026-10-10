@@ -125,6 +125,98 @@ Matching three projected points does not necessarily establish a unique camera p
 This principle does not establish:
 
 - A camera calibration procedure.
+
+## Geometry Principle 4 — Projection Equivalence
+
+**Status:** Approved — Working Draft 0.1
+
+**Classification:** Geometric principle.
+
+### Plain-Language Statement
+
+Two TPS views match when A, B, and C appear in the same places in both images.
+
+### Precise Statement
+
+Two three-point projections are equivalent when their corresponding image points occupy identical locations in a common image coordinate frame.
+
+### Explanation
+
+A TPS reference records three corresponding image points:
+
+- A → a
+- B → b
+- C → c
+
+Two three-point projections are equivalent when their corresponding image-point locations agree after both are expressed in a common, consistently registered image coordinate frame.
+
+This comparison requires:
+
+- Consistent point correspondence.
+- A defined image coordinate frame.
+- Consistent registration between the reference and comparison frames.
+- Equality of corresponding image-point locations.
+
+### Image Coordinates
+
+Distinguish between:
+
+1. **Pixel coordinates**
+
+   Positions expressed in the coordinate system of a particular raster image.
+
+2. **Normalized image coordinates**
+
+   Positions expressed relative to a defined image coordinate frame.
+
+Different pixel dimensions do not necessarily prevent projection equivalence.
+
+### Example
+
+An image with 1920 × 1080 pixels may place point a at (480, 270). An image with 3840 × 2160 pixels may place point a at (960, 540). In both images, point a is located 25% of the way across and 25% of the way down the image.
+
+These positions are equivalent under a consistent full-frame normalization convention.
+
+This example demonstrates coordinate equivalence for one point. A complete three-point projection match requires equivalent positions for all three corresponding points.
+
+### Important Distinctions
+
+- Equal pixel coordinates are not required when image dimensions differ.
+- Equal normalized coordinates alone do not establish equivalence unless the coordinate frames and their registration are defined consistently.
+- Resizing, cropping, rotation, mirroring, and changes in image aspect ratio may alter the relationship between coordinate frames.
+- Any transformations used to register the images must be explicitly defined.
+- A projection match does not require identical image resolutions.
+- A projection match does not require identical physical triangles, cameras, or lenses.
+- Equivalence of three-point projections does not imply equivalence of the complete photographs.
+
+### Exact and Practical Matching
+
+Distinguish:
+
+**Exact equivalence:** All three corresponding image-point locations agree in the common coordinate frame.
+
+**Practical matching:** The corresponding locations agree within a specified tolerance.
+
+Numerical tolerance is not established here, and the existing Projection Match definition is not redefined.
+
+### TPS Implication
+
+TPS references can be compared across different image representations when their coordinate frames are consistently registered.
+
+Projection equivalence concerns the recorded locations of corresponding image points, not the uniqueness of the underlying physical configuration.
+
+### Scope
+
+This principle does not establish:
+
+- A required image resolution.
+- A required image aspect ratio.
+- A universal normalization convention.
+- An automatic crop-detection procedure.
+- An image-registration algorithm.
+- A numerical matching tolerance.
+- Unique camera reconstruction.
+- Equivalence of entire photographs.
 - A required TPS triangle size.
 - A required TPS triangle orientation.
 - A required camera-to-triangle distance.
