@@ -1,6 +1,8 @@
 # Three Point System (TPS) Specification
 
-**Status:** Working Draft 0.1
+**Status:** TPS Specification v0.1 — Candidate
+
+This candidate records the approved TPS specification baseline. Mathematical derivations remain documented in the research directory, and experimental validation remains separate. The candidate is not yet experimentally validated. The two blocking findings identified in the specification review have been addressed; the remaining clarification and research findings are preserved in [docs/SPECIFICATION_REVIEW.md](docs/SPECIFICATION_REVIEW.md).
 
 ## TPS Kernel
 

@@ -9,6 +9,8 @@ those same three points appear in an image."
 
 TPS is independent of software and hardware. It may be implemented using physical overlays, camera monitors, film, or software.
 
-The specification is under development. See [SPECIFICATION.md](SPECIFICATION.md).
+**Current specification status:** TPS Specification v0.1 — Candidate.
+
+The candidate records approved specification material. Mathematical derivations remain in the research directory, and experimental validation is recorded separately. The candidate is not yet experimentally validated. See [SPECIFICATION.md](SPECIFICATION.md).
 
 See the [primary use case](docs/USE_CASES.md).
