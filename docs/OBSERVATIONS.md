@@ -1,8 +1,33 @@
 # Observations
 
-The following initial observations are provisional until reviewed.
+## Review Statuses
 
-1. Three non-collinear points form a triangle.
+- **Proposed:** Under discussion.
+- **Approved:** Reviewed and accepted for the working draft.
+- **Validated:** Supported by mathematical proof or appropriate testing.
+
+## Observation 1
+
+**Plain-language statement:**
+
+Three points can form a triangle.
+
+**Precise statement:**
+
+Three distinct points that do not lie on the same straight line form a triangle.
+
+**Classification:** Established geometric fact.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+Three points define a triangle when they are distinct and non-collinear.
+
+This is an established property of Euclidean geometry, not a new TPS discovery or experimental hypothesis.
+
+## Additional Observations
+
 2. A camera can view those three points.
 3. The three physical points appear as points in a two-dimensional image.
 4. Changing the camera's focal length can change the projected positions of those points.
