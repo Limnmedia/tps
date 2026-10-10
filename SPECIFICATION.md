@@ -17,7 +17,7 @@ See [docs/DEFINITIONS.md](docs/DEFINITIONS.md).
 
 ## 3. Invariants
 
-Reserved for review and development.
+See [docs/INVARIANTS.md](docs/INVARIANTS.md).
 
 ## 4. Assumptions and Constraints
 
