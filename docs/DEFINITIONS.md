@@ -124,3 +124,64 @@ Correspondence:
 Correspondence must not be confused with proximity.
 
 For example, image point a remains associated with physical point A, even if image point b happens to appear closer to A's previous image location.
+
+## Definition 4 — Projection
+
+**Plain-language definition:**
+
+A camera turns the locations of points in the real world into locations in an image.
+
+**Precise definition:**
+
+Projection is the geometric mapping of physical points in three-dimensional space to corresponding locations in a two-dimensional image, according to a camera model.
+
+**Classification:** Foundational geometric transformation.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+A physical point has a location in three-dimensional space.
+
+A camera represents that physical point at a corresponding location in a two-dimensional image.
+
+The geometric relationship between these locations is called projection.
+
+Projection depends on the camera's position, orientation, and imaging properties.
+
+TPS establishes correspondence between three physical points and their projected image points.
+
+By convention:
+
+- Physical point A → Image point a
+- Physical point B → Image point b
+- Physical point C → Image point c
+
+The three-point relationship can be expressed as:
+
+```text
+Three physical points
+        ↓
+     Projection
+        ↓
+Three corresponding image points
+```
+
+This is a conceptual relationship, not yet a mathematical formula.
+
+Projection:
+
+- Maps physical points into image space.
+- Depends on the camera model.
+- Does not generally preserve physical distances.
+- Does not generally preserve physical angles.
+- Does not independently establish physical depth.
+- Does not necessarily provide a unique inverse mapping from an image point to a physical point.
+
+Projection must not be confused with correspondence.
+
+Correspondence identifies which physical point is associated with which image point.
+
+Projection describes the geometric mapping between those points.
+
+TPS does not require a particular camera, software application, or recording medium.
