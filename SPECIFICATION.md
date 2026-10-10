@@ -21,7 +21,7 @@ See [docs/INVARIANTS.md](docs/INVARIANTS.md).
 
 ## 4. Assumptions and Constraints
 
-Reserved for review and development.
+See [docs/CONSTRAINTS.md](docs/CONSTRAINTS.md).
 
 ## 5. Geometric Model
 
