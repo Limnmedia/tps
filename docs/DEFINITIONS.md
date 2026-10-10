@@ -185,3 +185,64 @@ Correspondence identifies which physical point is associated with which image po
 Projection describes the geometric mapping between those points.
 
 TPS does not require a particular camera, software application, or recording medium.
+
+## Definition 5 — Three-Point Projection
+
+**Plain-language definition:**
+
+A three-point projection is where three points appear in an image.
+
+**Precise definition:**
+
+A three-point projection is the ordered arrangement of three image points corresponding to three identified physical points.
+
+**Classification:** TPS-specific geometric definition.
+
+**Status:** Approved — Working Draft 0.1
+
+**Explanation:**
+
+TPS identifies three physical points conventionally labeled A, B, and C.
+
+A camera projects these points into a two-dimensional image at corresponding locations a, b, and c.
+
+The ordered arrangement of these three image points is called a three-point projection.
+
+Correspondence is preserved:
+
+- Physical point A → Image point a
+- Physical point B → Image point b
+- Physical point C → Image point c
+
+The three-point projection describes the arrangement in image space, not the physical triangle itself.
+
+### Order and Identity
+
+The three image points are identified, not anonymous.
+
+Their correspondence to A, B, and C must remain consistent when recording, comparing, or reproducing a three-point projection.
+
+The term "ordered" establishes this consistent identity convention. It does not imply that the points must be arranged in a particular spatial order within the image.
+
+### Degenerate Projections
+
+Three non-collinear physical points may produce collinear or coincident image points under certain camera configurations.
+
+These are still three-point projections. However, they may not contain sufficient geometric information for a particular TPS operation.
+
+Therefore, distinguish:
+
+- **Three-point projection:** The three corresponding image locations.
+- **Valid TPS reference:** A three-point projection satisfying the conditions required for the intended TPS operation.
+
+The validity conditions will be established later under assumptions, constraints, and geometric analysis.
+
+A three-point projection:
+
+- Exists in two-dimensional image space.
+- Preserves the identity of corresponding points.
+- Does not preserve physical distances or angles in general.
+- Does not independently establish camera position.
+- Does not independently establish focal length.
+- Does not necessarily reproduce the entire image.
+- May be geometrically degenerate.
