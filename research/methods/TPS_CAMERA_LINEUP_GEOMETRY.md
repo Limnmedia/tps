@@ -129,7 +129,7 @@ Real lenses introduce distortion, focus breathing, pupil movement, and other dep
 `AOV_h = 2 atan(AB W_image / (2 D |x_B−x_A|))`  
 `f_mm = f_px W_sensor / W_image`.
 
-`x_A,x_B` are roll-corrected horizontal pixel coordinates; `W_image` is **captured image width**, not necessarily native sensor pixel width; `W_sensor` is active physical sensor width for that captured mode. The millimeter conversion is omitted when active sensor width is unknown. `D` is the practical sensor-plane reference measurement. These equations assume approximately equal A/B optical depth and horizontal AB alignment, plus the approximation `D≈Z` from projection center to the reference. They do **not** apply unconditionally to arbitrary A/B orientation or triangle geometry. `f_px` is a *Working* Focal Length, not necessarily the laboratory focal length.
+`x_A,x_B` are the horizontal image coordinates used in the calculation; `W_image` is **captured image width**, not necessarily native sensor pixel width; `W_sensor` is active physical sensor width for that captured mode. The millimeter conversion is omitted when active sensor width is unknown. `D` is the practical sensor-plane reference measurement. Recorded camera tilt and roll are recovery measurements, not inputs to these equations. These equations assume approximately equal A/B optical depth and horizontal AB alignment, plus the approximation `D≈Z` from projection center to the reference. They do **not** apply unconditionally to arbitrary A/B orientation or triangle geometry. `f_px` is a *Working* Focal Length, not necessarily the laboratory focal length.
 
 ### 5.3 Tilt/reference-distance triangle: important convention check
 

@@ -331,9 +331,9 @@ AOV_h = 2 * atan(AB * W_image / (2 * D * |xB - xA|))
 f_mm = f_px * W_sensor / W_image
 ```
 
-Here, `xA` and `xB` are roll-corrected horizontal image coordinates. `AB` is the measured physical A–B distance. `D` is the TPS Reference Distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters.
+Here, `xA` and `xB` are the horizontal image coordinates used in the calculation. `AB` is the measured physical A–B distance. `D` is the TPS Reference Distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters. Recorded camera tilt and roll are recovery measurements; they are not inputs to these calculations.
 
-The calculation assumes that A and B are at approximately equal depth and aligned as closely as practical with camera-horizontal. Roll correction accounts for image rotation; it does not correct physical A–B misalignment. These relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) and are not universally exact optical identities.
+The calculation assumes that A and B are at approximately equal depth and aligned as closely as practical with camera-horizontal. Camera tilt and roll may be recorded separately for recovery, but they are not inputs to the Working Focal Length calculation. These relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) and are not universally exact optical identities.
 
 `f_px` and `AOV_h` do not require physical sensor dimensions. `f_mm` requires the active physical sensor width. If physical sensor dimensions are unavailable, the TPS reference remains usable. The AOV is derived from TPS geometry and does not independently determine a missing physical sensor width.
 
