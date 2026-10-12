@@ -6,6 +6,8 @@
 
 The Three Point System (TPS) is an open, implementation-independent method for establishing and preserving correspondence between three identified physical reference points and their locations in an image. That correspondence provides a geometric reference for comparing and reproducing a recorded camera view.
 
+TPS was created by Christopher Weinberg. LIMNMEDIA develops and maintains the open specification.
+
 TPS is intended for artists, students, independent animators, stop-motion teams, and VFX technicians who need a practical way to preserve a camera view after a camera has moved, been removed, or been replaced.
 
 > **TPS connects three points in the physical world with where those same three points appear in an image.**

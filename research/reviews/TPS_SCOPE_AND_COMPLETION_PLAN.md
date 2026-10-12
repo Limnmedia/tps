@@ -92,16 +92,7 @@ Each produces an original image, a recovered image, TPS measurements, and operat
 
 These are the smallest issues that can prevent an independent implementation or make a technical description materially ambiguous. They should be resolved before declaring the specification complete.
 
-### A1. Reference validity for the second physical setup
-
-**Affected files:** `docs/DEFINITIONS.md`, `docs/CONSTRAINTS.md`, `docs/USE_CASES.md`, supporting validation protocol  
-**Issue:** The specification permits physical reference points, triangle measurements, and recovery, but does not give a concise rule for which reference information remains authoritative when a view is transferred to a second setup or when the physical triangle is reproduced.
-
-**Why it blocks:** Test 2 cannot be independently implemented consistently unless the operator knows whether the second setup must reproduce the same A/B/C relationships, which fields are transferred unchanged, and which are newly measured. This is an operational reference-validity issue, not a requirement for triangle similarity in all TPS uses.
-
-**Smallest correction:** Add a narrow operating-case statement: for view transfer, preserve point identity and declare the physical relationships and any changed scale or setup condition; do not imply that a different triangle is equivalent without documenting the relationship. Keep triangle similarity optional unless separately justified.
-
-### A2. Incorporation status of physical validation evidence
+### A1. Incorporation status of physical validation evidence
 
 **Affected files:** `docs/VALIDATION.md`, supporting physical-validation draft, `SPECIFICATION.md`  
 **Issue:** The candidate specification and repository reviews correctly state that practical performance is unvalidated, but the public validation document is still a placeholder while a draft three-test protocol exists in research reviews.
@@ -112,7 +103,7 @@ These are the smallest issues that can prevent an independent implementation or 
 
 ### Blocker boundary
 
-The former D/focus terminology blocker is resolved by the current documentation: D is measured from the sensor-plane mark toward the estimated A–B midpoint, focus distance is separate, and tilt/roll are recovery measurements rather than Working Focal Length inputs. A1 is the remaining specification-completion blocker because it affects independent interpretation of view transfer. A2 is a publication/evidence blocker for any claim that TPS has been physically validated; it is not a reason to invent additional tests or mathematical requirements. No other current research question should be promoted to category A without showing a direct implementation ambiguity or an unsupported Paper 1 claim.
+The former D/focus terminology blocker and the former view-transfer validity blocker are resolved by the current documentation. The original TPS reference remains unchanged during transfer; the second setup’s actual A/B/C relationships and any changed scale or arrangement are recorded; and the recorded image correspondences guide recovery. A1 is now a publication/evidence blocker for any claim that TPS has been physically validated; it is not a reason to invent additional tests or mathematical requirements. No other current research question should be promoted to category A without showing a direct implementation ambiguity or an unsupported Paper 1 claim.
 
 ## 5. Minimum completion checklist
 
@@ -181,7 +172,7 @@ These may be valuable future research or applications, but none is required to f
 
 ## Recommended completion order
 
-1. Resolve A1–A3 with explicit, minimal normative wording.
+1. Resolve A1 with explicit, minimal evidence-status wording.
 2. Keep the existing equations and definitions unchanged except for clarifying field semantics and recorded conventions.
 3. Adopt the three-test physical validation protocol as supporting material and perform the tests when practical.
 4. Update Paper 1 only to reflect completed evidence and the bounded methodological contribution.

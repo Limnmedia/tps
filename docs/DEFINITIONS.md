@@ -275,6 +275,8 @@ The reference preserves the identities and image locations of a, b, and c.
 
 These recorded locations can later be compared against another camera projection.
 
+When the reference is transferred to a second physical setup, the original TPS reference remains unchanged. The corresponding physical points A, B, and C are identified on the second setup and their actual physical relationships are measured. Differences in scale or point arrangement are recorded rather than assumed equivalent. The recorded image correspondences guide registered camera lineup and view comparison; they do not by themselves establish a unique camera pose or require an identical second triangle.
+
 A TPS reference may be recorded using physical marks, transparent overlays, photographic media, digital coordinates, or other suitable methods.
 
 The reference is information, not a particular recording technology.
