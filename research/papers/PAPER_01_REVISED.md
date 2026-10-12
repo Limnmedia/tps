@@ -126,7 +126,7 @@ These calculations require assumptions. A and B should be at approximately equal
 
 `f_px` and `AOV_h` do not require physical sensor dimensions. `f_mm` does. If active sensor dimensions are unavailable, the reference remains usable with the pixel calculation and AOV retained while the millimeter calculation is omitted. The AOV is derived from TPS geometry; it does not independently determine a missing sensor width. The Working Focal Length is a TPS measurement convention and is not necessarily identical to a manufacturer’s nominal focal length or a laboratory effective focal length.
 
-These equations are dimensionally consistent under the stated ideal geometry. Their application to real cameras is approximate and remains experimentally unvalidated.
+These equations are dimensionally consistent under the stated ideal geometry. Their application to real cameras is approximate. TPS uses established geometric principles and alignment techniques; its accuracy, repeatability, reproducibility, and performance under varying production conditions require systematic characterization.
 
 ## 7. Recording and Recovering a View
 
@@ -166,7 +166,19 @@ TPS uses information from both traditions but adopts neither objective completel
 
 This combination may be useful for independent animators, students, small productions, educators, and production environments where the desired result is a repeatable view rather than a complete camera asset. Its possible contribution is organizational and operational: define a small reference containing physical and image information, preserve it independently of technology, and use it to guide recovery.
 
-The component techniques are established; this paper characterizes their particular use as a portable reference workflow. Comparative performance and originality are open questions rather than demonstrated results.
+### Research Origins and Production Context
+
+TPS is an independently formalized method developed through LIMNMEDIA. The author reports approximately two decades of professional stop-motion and VFX experience, including work associated with *Coraline*, *ParaNorman*, *The Boxtrolls*, *Kubo and the Two Strings*, *Missing Link*, *The Tiny Chef Show* (Seasons 2 and 3), and *In the Know*. This experience informs the practical problem and the proposed workflow. It does not imply that TPS was an official studio project, a production deliverable, or an endorsed methodology of any studio or production.
+
+The later formalization of TPS through LIMNMEDIA is distinct from those production experiences. The component techniques are established; this paper presents their proposed organization as a portable reference workflow. Comparative performance, repeatability, reproducibility, and the extent of any distinctive contribution remain open questions requiring systematic characterization. No intellectual-property ownership claim is made here on the basis of professional experience alone.
+
+### View Continuity and Cinematic Space
+
+TPS distinguishes reproduction of a camera view from reconstruction of a unique physical camera state. Camera position, orientation, reference measurements, and optical parameters remain important because they provide practical means of approaching a recorded view. They are instrumental to recovery, rather than the final criterion by which recovery is judged. The common reference is the projected image, whose formation from physical geometry is described by perspective-projection models [13].
+
+Physical measurements constrain the recovery process; explicit A→a, B→b, and C→c correspondence establishes reference image positions; and registered comparison provides feedback for camera adjustment. This makes visual refinement a meaningful part of the method rather than an alternative to measurement. Nevertheless, agreement at three points does not establish agreement elsewhere in the image.
+
+In cinematic production, visual coherence can also support the perception of a single represented or diegetic world. Film studies uses *diegesis* for a film's story or narrative world [14]. Film-production choices establish a coherent and credible diegesis through elements such as sets, props, lighting, and staging [15]. Practical compositing guidance likewise treats compatible perspective, scale, framing, lighting, and related image conditions as important when combining independently produced elements [16]. These sources provide context for TPS's view-oriented objective, but do not demonstrate that TPS alone can achieve whole-image coherence or diegetic continuity. Those outcomes depend on additional scene and imaging conditions and require systematic characterization.
 
 ## 10. Future Validation
 
@@ -209,3 +221,9 @@ The mathematical foundations and many operational components have clear preceden
 [12] DZED Systems, *Using Dragonframe 2025*. https://www.dragonframe.com/download/Using%20Dragonframe%202025.pdf.
 
 [13] MIT, *Foundations of Computer Vision*, §5.3.1, “Image Formation by Perspective Projection.” https://visionbook.mit.edu/imaging.html.
+
+[14] Columbia University, *Film Language Glossary*, “Diegesis.” https://filmglossary.ccnmtl.columbia.edu/term/diegesis/.
+
+[15] Oklahoma State University Open Textbooks, *Introduction to Film & TV*, “Mise en scène.” https://open.library.okstate.edu/introfilmtv/part/mise-en-scene/.
+
+[16] Adobe, “What makes amazing creative compositing.” https://www.adobe.com/learn/photoshop/web/photography-effects.
