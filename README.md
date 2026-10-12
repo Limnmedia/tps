@@ -1,6 +1,6 @@
 # Three Point System (TPS)
 
-**An open camera-view reference standard by LIMNMEDIA.**
+**An open camera-view reference method and emerging standard by LIMNMEDIA.**
 
 **Record the view. Move the camera. Find the view again.**
 
@@ -45,8 +45,9 @@ The physical triangle and the image triangle are related, but they are not assum
 1. Identify three physical reference points.
 2. Record their correspondence and image locations in a defined image coordinate frame.
 3. Measure and record the physical relationships among A, B, and C, along with the information needed to interpret their image locations.
-4. Present the reference in registration with a later live camera view.
-5. Adjust the camera while comparing the live locations of A, B, and C with the recorded three-point image relationship.
+4. Measure the TPS Reference Distance and calculate the Working Focal Length using the recorded geometry.
+5. Present the reference in registration with a later live camera view.
+6. Adjust the camera while comparing the live locations of A, B, and C with the recorded three-point image relationship.
 
 A and B provide a useful initial alignment reference. C supplies additional geometric information that can reveal differences not apparent from A and B alone.
 
