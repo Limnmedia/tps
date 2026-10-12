@@ -18,6 +18,8 @@ A camera setup may need to be reproduced days, weeks, or months after the origin
 
 TPS preserves a small, portable reference that can help an operator work back toward the original view.
 
+Imagine an animator photographing a miniature set. The camera must be removed so the set can be modified. Weeks later, the animator needs to photograph the scene from approximately the same view. TPS provides a recorded reference to guide the camera back toward that view.
+
 ## The Idea
 
 Three physical points are identified as **A**, **B**, and **C**. Their corresponding locations in the image are recorded as **a**, **b**, and **c**:
@@ -42,9 +44,11 @@ The physical triangle and the image triangle are related, but they are not assum
 
 1. Identify three physical reference points.
 2. Record their correspondence and image locations in a defined image coordinate frame.
-3. Preserve relevant physical measurements and camera-reference information.
+3. Measure and record the physical relationships among A, B, and C, along with the information needed to interpret their image locations.
 4. Present the reference in registration with a later live camera view.
 5. Adjust the camera while comparing the live locations of A, B, and C with the recorded three-point image relationship.
+
+A and B provide a useful initial alignment reference. C supplies additional geometric information that can reveal differences not apparent from A and B alone.
 
 The objective is the closest practical three-point projection match. A physical overlay, monitor, film reference, or software display may be used, but TPS does not require a particular technology.
 
@@ -52,7 +56,7 @@ The objective is the closest practical three-point projection match. A physical 
 
 - **Accessible:** designed to support practical camera work without requiring a complete tracking or reconstruction pipeline.
 - **Portable:** the reference is information, not a particular application, file format, camera, or recording medium.
-- **Interoperable:** physical measurements and image correspondences can be interpreted across tools and workflows.
+- **Interoperable by design:** TPS defines physical measurements and image correspondences independently of a particular tool or workflow.
 - **Understandable:** the central operation can be explained directly in physical and image-space terms.
 
 TPS does not guarantee a unique camera position, identical camera pose, pixel-perfect alignment, or complete scene reproduction. Those limits are part of the project’s technical documentation.
