@@ -61,11 +61,11 @@ The calculated value and necessary inputs are preserved with the TPS reference. 
 
 ### Recovery
 
-Recovery compares the recorded three-point projection with the corresponding points in a live camera view. The user adjusts the camera to obtain the closest practical match. The recorded reference points must be presented in registration with the live viewing frame. A transparent reference over a television monitor, registered celluloid or film, and a digital overlay such as a transparent PNG are possible representations; none is mandatory. An overlay represents the TPS reference for comparison but is not the complete TPS reference itself. A recovery record may preserve observed image coordinates and comparison information, but saving one is optional. The recovery camera need not be identical to the original camera.
+Recovery uses the recorded three-point projection as a reference for comparison with the corresponding points in a live camera view. The user adjusts the camera to obtain the closest practical reproduction of the recorded view. The recorded reference points must be presented in registration with the live viewing frame. A transparent reference over a television monitor, registered celluloid or film, and a digital overlay such as a transparent PNG are possible representations; none is mandatory. An overlay represents the TPS reference for comparison but is not the complete TPS reference itself. A recovery record may preserve observed image coordinates and comparison information, but saving one is optional. The recovery camera need not be identical to the original camera.
 
 ### Matching Principle
 
-The objective is the closest practical match between corresponding three-point projections. Users refine the camera view through comparison with the TPS reference. TPS does not prescribe a universal numerical acceptance tolerance.
+The objective is the closest practical reproduction of the recorded view, evaluated through the match between corresponding three-point projections. Users refine the camera view through comparison with the TPS reference. TPS does not prescribe a universal numerical acceptance tolerance.
 
 A projection match does not guarantee identical camera pose or complete scene alignment.
 

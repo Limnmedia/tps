@@ -4,7 +4,7 @@
 
 **Record the view. Move the camera. Find the view again.**
 
-The Three Point System (TPS) is an open, implementation-independent method for recording, comparing, and reproducing a camera view. It connects three identified physical reference points with the locations where those same points appear in an image.
+The Three Point System (TPS) is an open, implementation-independent method for establishing and preserving correspondence between three identified physical reference points and their locations in an image. That correspondence provides a geometric reference for comparing and reproducing a recorded camera view.
 
 TPS is intended for artists, students, independent animators, stop-motion teams, and VFX technicians who need a practical way to preserve a camera view after a camera has moved, been removed, or been replaced.
 
@@ -44,7 +44,7 @@ The physical triangle and the image triangle are related, but they are not assum
 2. Record their correspondence and image locations in a defined image coordinate frame.
 3. Preserve relevant physical measurements and camera-reference information.
 4. Present the reference in registration with a later live camera view.
-5. Adjust the camera while comparing the live locations of A, B, and C with the recorded projection.
+5. Adjust the camera while comparing the live locations of A, B, and C with the recorded three-point image relationship.
 
 The objective is the closest practical three-point projection match. A physical overlay, monitor, film reference, or software display may be used, but TPS does not require a particular technology.
 
