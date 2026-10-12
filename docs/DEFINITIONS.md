@@ -312,7 +312,7 @@ A TPS reference preserves:
 3. Explicit correspondence: A → a, B → b, and C → c.
 4. Image coordinate-frame information sufficient to interpret and register the recorded locations.
 5. Physical triangle geometry, including the measured relationships between A, B, and C.
-6. TPS Reference Distance (D), measured from the camera sensor plane to the designated physical reference plane.
+6. TPS Reference Distance (D), measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B.
 7. The actual captured image width and height in pixels. These dimensions are authoritative for the capture and must not be replaced by native sensor pixel resolution.
 8. Active physical sensor dimensions in millimeters, when known, corresponding to the active imaging area represented by the capture.
 9. Working Focal Length, its calculation inputs, and the calculated horizontal AOV.
@@ -343,7 +343,7 @@ Downstream applications, including VFX pipelines, may independently recalculate 
 
 The calculation inputs needed for reproducibility and verification are retained.
 
-Sensor-plane distance is a practical measurement convention. Relative to ideal projection-center geometry, the result is approximate. The Working Focal Length is not necessarily identical to the lens manufacturer's nominal focal length. See the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) for the mathematical derivation and limitations.
+Sensor-plane distance toward the estimated A–B midpoint is a practical measurement convention. Relative to ideal projection-center geometry, the result is approximate. Focus distance is a separate camera/lens measurement and is not substituted for D. The Working Focal Length is not necessarily identical to the lens manufacturer's nominal focal length. See the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) for the mathematical derivation and limitations.
 
 The TPS Reference Distance is distinct from a lens focus-ring marking, an optical projection-center distance, and a manufacturer-reported focus distance.
 

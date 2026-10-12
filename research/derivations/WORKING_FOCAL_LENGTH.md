@@ -13,7 +13,7 @@ Definitions:
 - `xA`, `xB`: horizontal image coordinates of A and B, in pixels.
 - `W_image`: captured image width, in pixels.
 - `W_sensor`: active physical sensor width, in millimeters.
-- `D`: measured distance from the camera sensor plane to the designated reference plane, in millimeters.
+- `D`: measured distance from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B, in millimeters. Focus distance is a separate camera/lens measurement.
 - `AB`: measured physical distance between A and B, in millimeters.
 
 ## Derivation Under an Ideal Model
@@ -135,11 +135,11 @@ A plane parallel to the image plane is a special case in which all points on tha
 
 ## Sensor Plane, Projection Center, and Focus Distance
 
-The proposed `D` is measured from the camera sensor plane. In an ideal pinhole derivation, depth is measured from the projection center. In a real lens, the relevant optical reference is associated with principal planes or an effective projection center, not necessarily the physical sensor plane or the entrance pupil.
+The proposed `D` is measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B. In an ideal pinhole derivation, depth is measured from the projection center. In a real lens, the relevant optical reference is associated with principal planes or an effective projection center, not necessarily the physical sensor plane or the entrance pupil.
 
 Therefore, using sensor-plane distance in the proposed relationship is an approximation unless the chosen optical model establishes that the sensor-plane measurement is the intended object distance for the calculation.
 
-For a finite-focus thin-lens model, the image distance is not generally identical to the focal length. A more complete model distinguishes object distance, image distance, and principal-plane locations. The current proposed relationship does not specify those quantities, so it should not be described as an exact real-lens formula.
+Focus distance is a separate camera/lens measurement and is not the TPS Reference Distance. For a finite-focus thin-lens model, the image distance is not generally identical to the focal length. A more complete model distinguishes object distance, image distance, and principal-plane locations. The current proposed relationship does not specify those quantities, so it should not be described as an exact real-lens formula.
 
 The sensor-plane convention may nevertheless define a reproducible TPS quantity. That quantity is a TPS Working Focal Length, not automatically the manufacturer's nominal focal length or a laboratory-calibrated effective focal length.
 

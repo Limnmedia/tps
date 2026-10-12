@@ -92,16 +92,7 @@ Each produces an original image, a recovered image, TPS measurements, and operat
 
 These are the smallest issues that can prevent an independent implementation or make a technical description materially ambiguous. They should be resolved before declaring the specification complete.
 
-### A1. TPS Reference Distance and focus-distance field semantics
-
-**Affected files:** `SPECIFICATION.md`, `docs/DEFINITIONS.md`, `research/derivations/WORKING_FOCAL_LENGTH.md`  
-**Issue:** The specification defines D as a sensor-plane-to-designated-reference-plane distance, while definitions and research discussions also refer to focus distance and possible midpoint targeting. The documents do not state unambiguously whether “focus distance” is a separate recorded field, whether D is measured to a point or plane in the operational procedure, or which endpoint construction an implementation must preserve.
-
-**Why it blocks:** D appears in the approved Working Focal Length and AOV conventions. Two independent implementations could record different quantities under the same TPS field name and calculate different results.
-
-**Smallest correction:** State explicitly that focus distance and D are separate fields or formally declare them synonymous. Then define the approved D endpoints and measurement direction in one normative sentence, while retaining the existing approximation caveat. Do not add a new geometric model or change the equations.
-
-### A2. Reference validity for the second physical setup
+### A1. Reference validity for the second physical setup
 
 **Affected files:** `docs/DEFINITIONS.md`, `docs/CONSTRAINTS.md`, `docs/USE_CASES.md`, supporting validation protocol  
 **Issue:** The specification permits physical reference points, triangle measurements, and recovery, but does not give a concise rule for which reference information remains authoritative when a view is transferred to a second setup or when the physical triangle is reproduced.
@@ -110,7 +101,7 @@ These are the smallest issues that can prevent an independent implementation or 
 
 **Smallest correction:** Add a narrow operating-case statement: for view transfer, preserve point identity and declare the physical relationships and any changed scale or setup condition; do not imply that a different triangle is equivalent without documenting the relationship. Keep triangle similarity optional unless separately justified.
 
-### A3. Incorporation status of physical validation evidence
+### A2. Incorporation status of physical validation evidence
 
 **Affected files:** `docs/VALIDATION.md`, supporting physical-validation draft, `SPECIFICATION.md`  
 **Issue:** The candidate specification and repository reviews correctly state that practical performance is unvalidated, but the public validation document is still a placeholder while a draft three-test protocol exists in research reviews.
@@ -121,14 +112,13 @@ These are the smallest issues that can prevent an independent implementation or 
 
 ### Blocker boundary
 
-A1–A2 are specification-completion blockers because they affect independent interpretation of a calculation or transfer procedure. A3 is a publication/evidence blocker for any claim that TPS has been physically validated; it is not a reason to invent additional tests or mathematical requirements. Camera tilt and roll remain recorded recovery measurements, not Working Focal Length inputs or completion blockers. No other current research question should be promoted to category A without showing a direct implementation ambiguity or an unsupported Paper 1 claim.
+The former D/focus terminology blocker is resolved by the current documentation: D is measured from the sensor-plane mark toward the estimated A–B midpoint, focus distance is separate, and tilt/roll are recovery measurements rather than Working Focal Length inputs. A1 is the remaining specification-completion blocker because it affects independent interpretation of view transfer. A2 is a publication/evidence blocker for any claim that TPS has been physically validated; it is not a reason to invent additional tests or mathematical requirements. No other current research question should be promoted to category A without showing a direct implementation ambiguity or an unsupported Paper 1 claim.
 
 ## 5. Minimum completion checklist
 
 ### Specification 1.0
 
 - [ ] Confirm that `SPECIFICATION.md` remains the sole normative entry point.
-- [ ] Resolve D versus focus-distance semantics and the approved D measurement convention.
 - [ ] State the validity/recording rule for Test 2 view transfer and declared scale variation.
 - [ ] Preserve the single A–B Base Pair, C, existing equations, existing assumptions, and implementation independence.
 - [ ] Keep practical match, exact equivalence, and whole-image limitations distinct.

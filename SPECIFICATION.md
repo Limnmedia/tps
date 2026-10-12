@@ -37,7 +37,7 @@ A three-point projection describes correspondence between physical points and im
 
 ### TPS Reference Distance and Working Focal Length
 
-The TPS Reference Distance (D) is the measured distance from the camera sensor plane to the designated physical reference plane. It is distinct from a lens focus-ring marking, an optical projection-center distance, or a manufacturer-reported focus distance. The sensor-plane convention is practical and makes the calculation approximate relative to ideal projection-center geometry.
+The TPS Reference Distance (D) is measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B. The operator measures this distance as accurately as practical using ordinary equipment. D is distinct from focus distance, a lens focus-ring marking, an optical projection-center distance, or a manufacturer-reported focus distance. The sensor-plane convention is practical and makes the calculation approximate relative to ideal projection-center geometry.
 
 When establishing a TPS reference, TPS calculates and records the following related quantities:
 
