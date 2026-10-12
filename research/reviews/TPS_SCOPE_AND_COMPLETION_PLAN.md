@@ -117,7 +117,8 @@ The former D/focus terminology blocker and the former view-transfer validity blo
 
 ### Physical evidence
 
-- [ ] Finalize the concise three-test protocol without adding physical cases.
+- [x] Finalize the concise three-test protocol without adding physical cases.
+- [x] Prepare the validation evidence directories, README files, and measurement templates.
 - [ ] Perform Test 1: same-setup camera recovery.
 - [ ] Perform Test 2: second-setup view transfer.
 - [ ] Perform Test 3: declared physical-scale or image-gate variation, with the two cases distinguished.
