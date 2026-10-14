@@ -26,7 +26,7 @@ Use TPS to record sufficient information about the original camera view so that 
 2. Establish their corresponding image points a, b, and c.
 3. Record their correspondence and image locations in a consistently defined image coordinate frame.
 4. Preserve the physical triangle geometry.
-5. Record the TPS Reference Distance, measured from the camera sensor plane to the designated reference plane, and the actual captured image width and height.
+5. Record the TPS Reference Distance, measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B, and the actual captured image width and height.
 6. Record the coordinate-frame information needed to interpret and register the image points, and preserve physical sensor dimensions when known.
 7. Calculate the Working Focal Length and horizontal AOV once when establishing the TPS reference, and preserve the calculated values and necessary calculation inputs.
 8. During recovery, present the recorded reference points in registration with the live viewing frame, establish the corresponding physical reference points, and adjust the camera view to obtain the closest practical match.
@@ -61,3 +61,11 @@ This use case provides a basis for experiments:
 - Compare additional scene features to assess the practical limits of the match.
 
 These are proposed experiments, not validated results.
+
+## View Transfer to a Second Physical Setup
+
+When a recorded view is transferred to a second physical setup, the original TPS reference remains unchanged. The original image correspondences, physical measurements, image dimensions, coordinate-frame information, and camera-reference values remain the record of the original view.
+
+On the second setup, the operator identifies the corresponding physical reference points A, B, and C and measures their actual relationships. Any difference in physical scale, point arrangement, or setup condition is recorded rather than silently treated as equivalent to the original geometry. The operator then uses the recorded image correspondences in registered comparison to guide camera lineup and evaluates the resulting view.
+
+This transfer procedure does not require the second setup to have an identical physical triangle unless a particular operation explicitly requires that relationship. It does not introduce a new geometric transformation or camera-pose solution.

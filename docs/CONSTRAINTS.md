@@ -34,6 +34,14 @@ Its geometric relationship to the original triangle must be explicitly specified
 
 Geometric similarity is one possible relationship, but is not yet established as universally required by TPS.
 
+### Transfer to a Second Physical Setup
+
+The original TPS reference remains unchanged during transfer. It preserves the original A/B/C correspondence, image locations, physical measurements, image frame, and recorded camera-reference information.
+
+On a second physical setup, the operator identifies the corresponding A, B, and C points and measures their actual physical relationships. Differences in scale or point arrangement must be recorded and must not be silently treated as equivalent to the original geometry. The recorded image correspondences then guide registered camera-view comparison and recovery.
+
+An identical physical triangle is not required unless a specific operation explicitly requires it. This operating case does not define a scale-conversion formula or camera-pose solution.
+
 ## Important Distinctions
 
 - Physical point identity must remain consistent within each correspondence set.

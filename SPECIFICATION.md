@@ -37,7 +37,7 @@ A three-point projection describes correspondence between physical points and im
 
 ### TPS Reference Distance and Working Focal Length
 
-The TPS Reference Distance (D) is the measured distance from the camera sensor plane to the designated physical reference plane. It is distinct from a lens focus-ring marking, an optical projection-center distance, or a manufacturer-reported focus distance. The sensor-plane convention is practical and makes the calculation approximate relative to ideal projection-center geometry.
+The TPS Reference Distance (D) is measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B. The operator measures this distance as accurately as practical using ordinary equipment. D is distinct from focus distance, a lens focus-ring marking, an optical projection-center distance, or a manufacturer-reported focus distance. The sensor-plane convention is practical and makes the calculation approximate relative to ideal projection-center geometry.
 
 When establishing a TPS reference, TPS calculates and records the following related quantities:
 
@@ -49,9 +49,9 @@ AOV_h = 2 * atan(AB * W_image / (2 * D * |xB - xA|))
 f_mm = f_px * W_sensor / W_image
 ```
 
-Here, `xA` and `xB` are roll-corrected horizontal image coordinates. `AB` is the measured physical A–B distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters.
+Here, `xA` and `xB` are the horizontal image coordinates used in the calculation. `AB` is the measured physical A–B distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters. Recorded camera tilt and roll are recovery measurements; they are not inputs to these calculations.
 
-The calculation assumes that A and B are at approximately equal depth and that A–B is aligned as closely as practical with camera-horizontal. Roll correction accounts for image rotation; it does not correct physical A–B misalignment. The relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](research/derivations/WORKING_FOCAL_LENGTH.md) and are not presented as universally exact optical identities.
+The calculation assumes that A and B are at approximately equal depth and that A–B is aligned as closely as practical with camera-horizontal. Camera tilt and roll may be recorded separately for recovery, but they are not inputs to the Working Focal Length calculation. The relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](research/derivations/WORKING_FOCAL_LENGTH.md) and are not presented as universally exact optical identities.
 
 `f_px` and `AOV_h` do not require physical sensor dimensions. `f_mm` requires the active physical sensor width. If physical sensor dimensions are unavailable, the TPS reference remains usable and can preserve `f_px` and `AOV_h` without calculating `f_mm`. The AOV is derived from the TPS geometry; it is not assumed as an independent camera specification and does not determine a missing physical sensor width.
 
@@ -61,11 +61,11 @@ The calculated value and necessary inputs are preserved with the TPS reference. 
 
 ### Recovery
 
-Recovery compares the recorded three-point projection with the corresponding points in a live camera view. The user adjusts the camera to obtain the closest practical match. The recorded reference points must be presented in registration with the live viewing frame. A transparent reference over a television monitor, registered celluloid or film, and a digital overlay such as a transparent PNG are possible representations; none is mandatory. An overlay represents the TPS reference for comparison but is not the complete TPS reference itself. A recovery record may preserve observed image coordinates and comparison information, but saving one is optional. The recovery camera need not be identical to the original camera.
+Recovery uses the recorded three-point projection as a reference for comparison with the corresponding points in a live camera view. The user adjusts the camera to obtain the closest practical reproduction of the recorded view. The recorded reference points must be presented in registration with the live viewing frame. A transparent reference over a television monitor, registered celluloid or film, and a digital overlay such as a transparent PNG are possible representations; none is mandatory. An overlay represents the TPS reference for comparison but is not the complete TPS reference itself. A recovery record may preserve observed image coordinates and comparison information, but saving one is optional. The recovery camera need not be identical to the original camera.
 
 ### Matching Principle
 
-The objective is the closest practical match between corresponding three-point projections. Users refine the camera view through comparison with the TPS reference. TPS does not prescribe a universal numerical acceptance tolerance.
+The objective is the closest practical reproduction of the recorded view, evaluated through the match between corresponding three-point projections. Users refine the camera view through comparison with the TPS reference. TPS does not prescribe a universal numerical acceptance tolerance.
 
 A projection match does not guarantee identical camera pose or complete scene alignment.
 

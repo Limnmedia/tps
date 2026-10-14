@@ -275,6 +275,8 @@ The reference preserves the identities and image locations of a, b, and c.
 
 These recorded locations can later be compared against another camera projection.
 
+When the reference is transferred to a second physical setup, the original TPS reference remains unchanged. The corresponding physical points A, B, and C are identified on the second setup and their actual physical relationships are measured. Differences in scale or point arrangement are recorded rather than assumed equivalent. The recorded image correspondences guide registered camera lineup and view comparison; they do not by themselves establish a unique camera pose or require an identical second triangle.
+
 A TPS reference may be recorded using physical marks, transparent overlays, photographic media, digital coordinates, or other suitable methods.
 
 The reference is information, not a particular recording technology.
@@ -312,7 +314,7 @@ A TPS reference preserves:
 3. Explicit correspondence: A → a, B → b, and C → c.
 4. Image coordinate-frame information sufficient to interpret and register the recorded locations.
 5. Physical triangle geometry, including the measured relationships between A, B, and C.
-6. TPS Reference Distance (D), measured from the camera sensor plane to the designated physical reference plane.
+6. TPS Reference Distance (D), measured from the camera sensor-plane mark toward the estimated midpoint of Base Pair A–B.
 7. The actual captured image width and height in pixels. These dimensions are authoritative for the capture and must not be replaced by native sensor pixel resolution.
 8. Active physical sensor dimensions in millimeters, when known, corresponding to the active imaging area represented by the capture.
 9. Working Focal Length, its calculation inputs, and the calculated horizontal AOV.
@@ -331,9 +333,9 @@ AOV_h = 2 * atan(AB * W_image / (2 * D * |xB - xA|))
 f_mm = f_px * W_sensor / W_image
 ```
 
-Here, `xA` and `xB` are roll-corrected horizontal image coordinates. `AB` is the measured physical A–B distance. `D` is the TPS Reference Distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters.
+Here, `xA` and `xB` are the horizontal image coordinates used in the calculation. `AB` is the measured physical A–B distance. `D` is the TPS Reference Distance. `W_image` is the actual captured image width in pixels. `W_sensor` is the active physical sensor width in millimeters. Recorded camera tilt and roll are recovery measurements; they are not inputs to these calculations.
 
-The calculation assumes that A and B are at approximately equal depth and aligned as closely as practical with camera-horizontal. Roll correction accounts for image rotation; it does not correct physical A–B misalignment. These relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) and are not universally exact optical identities.
+The calculation assumes that A and B are at approximately equal depth and aligned as closely as practical with camera-horizontal. Camera tilt and roll may be recorded separately for recovery, but they are not inputs to the Working Focal Length calculation. These relationships share the assumptions and approximations documented in the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) and are not universally exact optical identities.
 
 `f_px` and `AOV_h` do not require physical sensor dimensions. `f_mm` requires the active physical sensor width. If physical sensor dimensions are unavailable, the TPS reference remains usable. The AOV is derived from TPS geometry and does not independently determine a missing physical sensor width.
 
@@ -343,7 +345,7 @@ Downstream applications, including VFX pipelines, may independently recalculate 
 
 The calculation inputs needed for reproducibility and verification are retained.
 
-Sensor-plane distance is a practical measurement convention. Relative to ideal projection-center geometry, the result is approximate. The Working Focal Length is not necessarily identical to the lens manufacturer's nominal focal length. See the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) for the mathematical derivation and limitations.
+Sensor-plane distance toward the estimated A–B midpoint is a practical measurement convention. Relative to ideal projection-center geometry, the result is approximate. Focus distance is a separate camera/lens measurement and is not substituted for D. The Working Focal Length is not necessarily identical to the lens manufacturer's nominal focal length. See the [Working Focal Length Derivation](../research/derivations/WORKING_FOCAL_LENGTH.md) for the mathematical derivation and limitations.
 
 The TPS Reference Distance is distinct from a lens focus-ring marking, an optical projection-center distance, and a manufacturer-reported focus distance.
 
