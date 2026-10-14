@@ -11,9 +11,9 @@ Record a camera view and TPS reference on one physical setup, move or remove the
 1. Establish and record the original camera view and TPS reference.
 2. Capture `original.png`.
 3. Move or remove the camera while leaving the physical reference setup in place.
-4. Use registered visual comparison and TPS to recover the view.
+4. Use the TPS overlay and visual comparison to recover the view.
 5. Capture `recovered.png`.
-6. Create `comparison.png` showing the registered original and recovered images.
+6. Create `comparison.png` showing the original, recovered, and grayscale difference images.
 7. Complete `measurements.md` with measurements and observations.
 
 ## Evidence
@@ -24,6 +24,16 @@ operator observations are supporting evidence.
 ## Public Test-01 record
 
 This record uses the take-02 evidence. The take-01 comparison is not used.
+
+[![Test-01 take-02 comparison](../../tps-testing/test-01/a-side/take-02/comparison/comparison.png)](../../tps-testing/test-01/a-side/take-02/comparison/comparison.png)
+
+*Test-01 demonstrates recovery of a recorded camera view after camera
+repositioning. Visual recovery demonstrated; quantitative TPS accuracy not
+established.*
+
+| Original A-side | Recovered B-side |
+|---|---|
+| [![Original A-side](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg)](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg) | [![Recovered B-side](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg) |
 
 - Original A-side: [`tps_001_02_X1_0001.jpg`](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg)
 - Recovered B-side: [`tps_001_02_X1_0002.jpg`](../../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)

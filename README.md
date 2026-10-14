@@ -4,6 +4,19 @@
 
 **Record the view. Move the camera. Find the view again.**
 
+[![Test-01 take-02 comparison: original A-side, recovered B-side, and grayscale difference](tps-testing/test-01/a-side/take-02/comparison/comparison.png)](validation/test-01-camera-recovery/README.md)
+
+*Test-01 demonstrates recovery of a recorded camera view after camera
+repositioning. [Read the complete Test-01 validation record](validation/test-01-camera-recovery/README.md).*
+
+| Original A-side | Recovered B-side |
+|---|---|
+| [![Original A-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg)](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg) | [![Recovered B-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg) |
+
+[Full-resolution comparison](tps-testing/test-01/a-side/take-02/comparison/comparison.png) · [Full-resolution original A-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg) · [Full-resolution recovered B-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)
+
+**Limitation:** Visual recovery demonstrated; quantitative TPS accuracy not established.
+
 The Three Point System (TPS) is an open, implementation-independent method for establishing and preserving correspondence between three identified physical reference points and their locations in an image. That correspondence provides a geometric reference for comparing and reproducing a recorded camera view.
 
 TPS was created by Christopher Weinberg. LIMNMEDIA develops and maintains the open specification.
