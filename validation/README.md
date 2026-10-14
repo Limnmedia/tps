@@ -1,6 +1,8 @@
 # TPS Validation Evidence
 
-This directory holds evidence for the three planned physical TPS experiments. All tests are currently **Not Yet Performed**.
+This directory holds evidence for the three physical TPS experiments. Test 01
+now has a public evidence record documenting practical visual overlay recovery.
+Tests 02 and 03 remain **Not Yet Performed**.
 
 For each test, preserve:
 
@@ -9,7 +11,10 @@ For each test, preserve:
 - `comparison.png` — a registered comparison of the original and recovered images.
 - `measurements.md` — setup measurements and operator observations.
 
-Registered image comparison is the primary practical evidence. Measurements and observations are supporting evidence. Do not add arbitrary acceptance thresholds or claim experimental validation before a test is performed.
+Registered image comparison is the primary practical evidence. Measurements and
+observations are supporting evidence. Test 01 demonstrates visual recovery;
+quantitative TPS accuracy has not been established. Do not add arbitrary
+acceptance thresholds or generalize this result to the other tests.
 
 ## Tests
 

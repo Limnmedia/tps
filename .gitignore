@@ -1,1 +1,5 @@
 .DS_Store
+
+# Capture workspace is private by default; only the curated evidence files are
+# force-added to the public repository.
+tps-testing/**

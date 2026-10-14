@@ -81,6 +81,10 @@ The current baseline is **TPS Specification v0.1 — Candidate**.
 
 The candidate records approved specification material. Mathematical derivations, prior-art research, and experimental plans are kept separately. The candidate is not yet experimentally validated.
 
+A public Test-01 record demonstrates practical visual overlay recovery for one
+setup. It does not establish quantitative TPS accuracy or change the status of
+the v0.1 Candidate specification.
+
 ## Documentation
 
 Start here:
@@ -93,6 +97,7 @@ Start here:
 - [Constraints](docs/CONSTRAINTS.md)
 - [Geometry](docs/GEOMETRY.md)
 - [Validation](docs/VALIDATION.md)
+- [Public Test-01 evidence](validation/test-01-camera-recovery/README.md)
 - [Specification review](docs/SPECIFICATION_REVIEW.md)
 
 Research and technical foundations:

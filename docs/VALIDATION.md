@@ -8,6 +8,10 @@ Mathematical verification and physical camera experiments are distinct forms of 
 **Status:** Operational validation recorded
 **Test data:** [`tps-testing/test-01`](../tps-testing/test-01)
 
+Public evidence record: [Test-01 Camera Recovery](../validation/test-01-camera-recovery/README.md).
+The take-02 comparison is [`comparison.png`](../tps-testing/test-01/a-side/take-02/comparison/comparison.png);
+no take-01 comparison is substituted.
+
 ### Purpose
 
 Verify that a TPS reference can be used as an image overlay to guide physical
@@ -38,8 +42,15 @@ The package records the three-point TPS reference with:
 - camera tilt / roll: 4.6° / 0.7°; and
 - normalized reference raster: 6000 × 4000 px.
 
-The package checksums validate successfully. The annotated reference plate is
+The local package checksums validated successfully before publication. The
+annotated reference plate is
 available at [`annotated_reference_plate.png`](../tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.tps/graphics/annotated_reference_plate.png).
+
+The source captures are from a Canon EOS R100: A-side at 2026-10-13
+11:58:47 PDT and B-side at 12:16:21 PDT. The images were captured by
+Christopher Weinberg, who approved public redistribution. Raw CR3 files are
+excluded from the public evidence set because they contain camera
+serial-number metadata.
 
 ### Observation
 
@@ -51,6 +62,15 @@ shadow, exposure, and surface texture.
 
 This supports the conclusion that the TPS overlay successfully guided the
 physical B-side camera line-up for this test.
+
+### Provenance and redistribution
+
+The images were captured by Christopher Weinberg. Public redistribution of the
+images and associated validation materials is approved by the author,
+Christopher Weinberg.
+
+The public copies remove camera serial-number metadata; raw source files remain
+outside the public evidence set.
 
 ### Scope and limitation
 
