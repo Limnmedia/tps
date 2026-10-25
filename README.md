@@ -1,12 +1,28 @@
 # Three Point System (TPS)
 
-**An open camera-view reference method and emerging standard by LIMNMEDIA.**
+**The Three Point System (TPS) was created by Christopher Weinberg.**
+
+**TPS is an open, implementation-independent camera-view reference method.**
 
 **Record the view. Move the camera. Find the view again.**
 
-The Three Point System (TPS) is an open, implementation-independent method for establishing and preserving correspondence between three identified physical reference points and their locations in an image. That correspondence provides a geometric reference for comparing and reproducing a recorded camera view.
+[![Test-01 take-02 comparison: original A-side, recovered B-side, and grayscale difference](tps-testing/test-01/a-side/take-02/comparison/comparison.png)](validation/test-01-camera-recovery/README.md)
 
-TPS was created by Christopher Weinberg. LIMNMEDIA develops and maintains the open specification.
+*Test-01 demonstrates recovery of a recorded camera view after camera
+repositioning. [Read the complete Test-01 validation record](validation/test-01-camera-recovery/README.md).*
+
+| Original A-side | Recovered B-side |
+|---|---|
+| [![Original A-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg)](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg) | [![Recovered B-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg) |
+
+[Full-resolution comparison](tps-testing/test-01/a-side/take-02/comparison/comparison.png) · [Full-resolution original A-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0001.jpg) · [Full-resolution recovered B-side](tps-testing/test-01/a-side/take-02/tps_001_02_X1_0002.jpg)
+
+**Limitation:** Visual recovery demonstrated; quantitative TPS accuracy not established.
+
+The Three Point System (TPS) establishes and preserves correspondence between
+three identified physical reference points and their locations in an image.
+That correspondence provides a geometric reference for comparing and
+reproducing a recorded camera view.
 
 TPS is intended for artists, students, independent animators, stop-motion teams, and VFX technicians who need a practical way to preserve a camera view after a camera has moved, been removed, or been replaced.
 
@@ -64,22 +80,15 @@ The objective is the closest practical three-point projection match. A physical 
 
 TPS does not guarantee a unique camera position, identical camera pose, pixel-perfect alignment, or complete scene reproduction. Those limits are part of the project’s technical documentation.
 
-## The LIMNMEDIA Ecosystem
-
-LIMNMEDIA is developing TPS as an open standard alongside tools such as **LIMNTPS** and **LIMNTPS Align**.
-
-The distinction is important:
-
-- **TPS** is the implementation-independent specification and research project.
-- **LIMNTPS** and **LIMNTPS Align** are software implementations or tools that may support TPS workflows.
-
-Software behavior does not define the TPS specification.
-
 ## Project Status
 
 The current baseline is **TPS Specification v0.1 — Candidate**.
 
 The candidate records approved specification material. Mathematical derivations, prior-art research, and experimental plans are kept separately. The candidate is not yet experimentally validated.
+
+A public Test-01 record demonstrates practical visual overlay recovery for one
+setup. It does not establish quantitative TPS accuracy or change the status of
+the v0.1 Candidate specification.
 
 ## Documentation
 
@@ -93,6 +102,7 @@ Start here:
 - [Constraints](docs/CONSTRAINTS.md)
 - [Geometry](docs/GEOMETRY.md)
 - [Validation](docs/VALIDATION.md)
+- [Public Test-01 evidence](validation/test-01-camera-recovery/README.md)
 - [Specification review](docs/SPECIFICATION_REVIEW.md)
 
 Research and technical foundations:
@@ -117,8 +127,8 @@ TPS is an evolving specification. Useful contributions include:
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or proposing a change.
 
-## About LIMNMEDIA
+## Maintainer and implementations
 
-LIMNMEDIA develops accessible tools and open technical methods connecting physical production, image-making, and practical creative workflows.
-
-Learn more at [limnmedia.com](https://limnmedia.com/).
+LIMNMEDIA maintains this open TPS project. **LIMNTPS** and **LIMNTPS Align**
+are implementations that may support TPS workflows; software behavior does not
+define the TPS specification.
