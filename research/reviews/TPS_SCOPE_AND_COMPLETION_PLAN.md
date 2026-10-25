@@ -64,7 +64,7 @@ These records preserve reasoning and research history. They are not specificatio
 The hierarchy is conceptually present but not stated in one repository-level policy document. Two wording issues could confuse readers:
 
 - `research/README.md` says the specification states validated mathematical relationships, while `SPECIFICATION.md` says the candidate is not yet experimentally validated. The intended meaning appears to be approved conventions based on stated assumptions, not validated real-world performance.
-- `docs/VALIDATION.md` remains a placeholder, while validation procedures exist in research methods and the physical-validation draft. The draft is supporting material, not an incorporated normative requirement.
+- `docs/VALIDATION.md` now defines the preparation protocol and evidence locations for the three physical tests. Experimental evidence has not yet been collected, and the protocol remains supporting material rather than an incorporated normative requirement.
 
 These are documentation-clarity issues, not reasons to redesign the repository. A short authority statement can be added later if needed.
 
@@ -95,11 +95,11 @@ These are the smallest issues that can prevent an independent implementation or 
 ### A1. Incorporation status of physical validation evidence
 
 **Affected files:** `docs/VALIDATION.md`, supporting physical-validation draft, `SPECIFICATION.md`  
-**Issue:** The candidate specification and repository reviews correctly state that practical performance is unvalidated, but the public validation document is still a placeholder while a draft three-test protocol exists in research reviews.
+**Issue:** The candidate specification and repository reviews correctly state that practical performance is unvalidated. The public validation document now defines the three-test protocol and evidence locations, but no experimental results have yet been collected.
 
 **Why it blocks:** This blocks a claim of completed practical validation and weakens external review if the repository does not clearly identify the protocol, evidence location, and status. It does not block the mathematical definition of TPS 1.0 if the specification explicitly remains a candidate pending validation.
 
-**Smallest correction:** Adopt or summarize the three-test protocol in the validation document, preserving its draft/non-normative status until results exist. Record original/recovered images, measurements, and observations as evidence. Do not claim that tests have been performed until the artifacts exist.
+**Smallest correction:** Preserve the current protocol and evidence structure, then record original/recovered images, measurements, and observations when each test is performed. Do not claim that tests have been performed until the artifacts exist.
 
 ### Blocker boundary
 
@@ -110,7 +110,7 @@ The former D/focus terminology blocker and the former view-transfer validity blo
 ### Specification 1.0
 
 - [ ] Confirm that `SPECIFICATION.md` remains the sole normative entry point.
-- [ ] State the validity/recording rule for Test 2 view transfer and declared scale variation.
+- [x] State the validity/recording rule for Test 2 view transfer and declared scale variation.
 - [ ] Preserve the single A–B Base Pair, C, existing equations, existing assumptions, and implementation independence.
 - [ ] Keep practical match, exact equivalence, and whole-image limitations distinct.
 - [ ] Ensure research notes and audits are not silently incorporated as requirements.
@@ -147,7 +147,7 @@ The former D/focus terminology blocker and the former view-transfer validity blo
 These improvements may increase clarity or reviewability but do not prevent the bounded specification or Paper 1 from proceeding:
 
 - Add a short document-authority statement to `research/README.md` or the top-level README.
-- Replace the validation placeholder with the already drafted three-test protocol and evidence template.
+- Preserve the three-test validation protocol and evidence template as supporting material while experiments remain pending.
 - Add a concise terminology hierarchy for projection, equivalence, exact match, practical match, and closest practical match.
 - Add the existing OpenCV camera-calibration source to Paper 1’s Related Work citations if the calibration comparison remains substantive.
 - Cross-reference the Related Work audit and context synchronization audit from research navigation material.
